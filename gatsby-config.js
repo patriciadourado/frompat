@@ -6,7 +6,7 @@ module.exports = {
       name: `Patricia Dourado`,
       summary: `who is always looking for happiness, love and peace.`,
     },
-    description: `My first tech blog where I write about my coding xps and things I did to not waste my time searching in another place.`,
+    description: `Computer engineer and a learning enthusiast. This is my first blog.`,
     siteUrl: `https://patriciadourado.com/blog/`,
     social: {
       twitter: `static_pat`,
@@ -63,6 +63,7 @@ module.exports = {
       options: {
         name: `Patricia Dourado`,
         short_name: `frompat`,
+        description: `Computer engineer and a learning enthusiast. This is my first blog.`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

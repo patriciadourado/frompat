@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import imageCard from "../../content/assets/frompat-icon.png"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -12,7 +13,11 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO 
+          title="All posts" 
+          image={imageCard}
+          descirption="Computer engineer and a learning enthusiast. This is my first blog."
+        />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
