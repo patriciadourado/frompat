@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const SEO = ({ description, lang, meta, title, image }) => {
-  const { site } = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
       query {
         site {
@@ -21,14 +21,29 @@ const SEO = ({ description, lang, meta, title, image }) => {
             social {
               twitter
             }
+            siteUrl
+          }
+        }
+        ogImageDefault: file(relativePath: {eq: "icon.png"}) { 
+          childImageSharp {
+            fixed(height: 260, width: 260) {
+              src
+            }
           }
         }
       }
     `
   )
-
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  // Be lenient with null values making sure we
+// return null if either argument is not provided
+  
+  const constructUrl = (baseUrl, path) => (!baseUrl || !path) ? null : `${baseUrl}${path}`;
+  
+  const { siteMetadata } = data.site;
+  const metaDescription = description || siteMetadata.description;
+  const defaultTitle = data.siteMetadata?.title;
+  const defaultImageUrl = constructUrl(siteMetadata.siteUrl, data.site.ogImageDefault?.childImageSharp?.fixed?.src)
+  const ogImageUrl = image || defaultImageUrl;
 
   return (
     <Helmet
@@ -36,77 +51,26 @@ const SEO = ({ description, lang, meta, title, image }) => {
         lang,
       }}
       title={title}
-      image={image}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
-        {
-          itemProp: `name`,
-          content: metaDescription,
-        },
-        {
-          itemProp:`description`,
-          content: metaDescription,
-        },
-        {
-          itemProp: `image`,
-          content: image,
-        },
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:url`,
-          content: `https://patriciadourado.com/frompat`,
-        },
-        {
-          property: `og:image`,
-          content: image,
-        },
-        {
-          property: `og:image:type`,
-          content: `image/png`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:image`,
-          content: image,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:url`,
-          content: `https://patriciadourado.com/frompat`,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+        { name: `title`, content: metaDescription, },
+        { name: `description`, content: metaDescription, },
+        { name: `thumbnail`, content: ogImageUrl, },
+        { itemProp: `name`, content: metaDescription, },
+        { itemProp:`description`, content: metaDescription, },
+        { itemProp: `image`, content: ogImageUrl, },
+        { property: `og:title`, content: title, },
+        { property: `og:description`, content: metaDescription, },
+        { property: `og:type`, content: `website`, },
+        { property: `og:url`, content: `https://patriciadourado.com/frompat`, },
+        { property: `og:image`, content: ogImageUrl, },
+        { property: `og:image:type`,content: `image/png`, },
+        { name: `twitter:card`, content: `summary_large_image`, },
+        { name: `twitter:creator`, content: siteMetadata?.social?.twitter || ``, },
+        { name: `twitter:title`, content: title, },
+        { name: `twitter:image`, content: ogImageUrl, },
+        { name: `twitter:url`, content: `https://patriciadourado.com/frompat`, },
+        { name: `twitter:description`, content: metaDescription,},
       ].concat(meta)}
     />
   )
@@ -123,6 +87,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image:PropTypes.string.isRequired,
 }
 
 export default SEO

@@ -29,7 +29,11 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO 
+        title="All posts | frompat " 
+        image="https://raw.githubusercontent.com/patriciadourado/frompat/master/content/assets/frompat-icon.png"
+        description="Computer engineer and a learning enthusiast. This is my first blog."
+      />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
