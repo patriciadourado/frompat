@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import imageCard from "../../content/assets/frompat-icon.png"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -15,8 +14,8 @@ const BlogIndex = ({ data, location }) => {
       <Layout location={location} title={siteTitle}>
         <SEO 
           title="All posts" 
-          image={imageCard}
-          descirption="Computer engineer and a learning enthusiast. This is my first blog."
+          image="https://raw.githubusercontent.com/patriciadourado/frompat/master/content/assets/frompat-icon.png"
+          description="Computer engineer and a learning enthusiast. This is my first blog."
         />
         <Bio />
         <p>
