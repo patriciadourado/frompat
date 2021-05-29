@@ -3,7 +3,7 @@ title: JWT Login Flask
 date: 2021-05-29T22:01:45.059Z
 description: A Flask JWT based login authentication using flask-praetorian
   module to handle the hard part and SQLAlchemy as ORM with PostreSQL as
-  database
+  database.
 ---
 Before running the Flask API its necessary to install a bunch of packages as you can check listed here [requirements.txt](https://github.com/patriciadourado/jwtlogin-flask/blob/master/requirements.txt).
 
