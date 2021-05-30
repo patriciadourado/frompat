@@ -1,4 +1,313 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/blog</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 15 Jan 2021 06:33:53 GMT</lastBuildDate><item><title><![CDATA[Using Netlify CMS to manage my blog posts]]></title><description><![CDATA[Since I started to think of writing some guides about everything I was learning and doing, I saw the need of starting my own blog to…]]></description><link>https://patriciadourado.com/blog/using-netlify-cms-to-manage-my-blog-posts/</link><guid isPermaLink="false">https://patriciadourado.com/blog/using-netlify-cms-to-manage-my-blog-posts/</guid><pubDate>Wed, 13 Jan 2021 11:27:08 GMT</pubDate><content:encoded>&lt;p&gt;Since I started to think of writing some guides about everything I was learning and doing, I saw the need of starting my own blog to document my steps and help myself to remind things I’ve already done without losing too much time learning again from different sources. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 30 May 2021 02:19:22 GMT</lastBuildDate><item><title><![CDATA[JWT Login Flask]]></title><description><![CDATA[Before running the Flask API its necessary to install a bunch of packages as you can check listed here requirements.txt. Python Virtual…]]></description><link>https://patriciadourado.com/blog/jwt-login-flask/</link><guid isPermaLink="false">https://patriciadourado.com/blog/jwt-login-flask/</guid><pubDate>Sat, 29 May 2021 22:01:45 GMT</pubDate><content:encoded>&lt;p&gt;Before running the Flask API its necessary to install a bunch of packages as you can check listed here &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask/blob/master/requirements.txt&quot;&gt;requirements.txt&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Python Virtual Environment&lt;/h2&gt;
+&lt;p&gt;To install the required modules I’ve used &lt;code class=&quot;language-text&quot;&gt;Python virtualenv&lt;/code&gt; to create a isolated Virtual Environment in Python so the project can have it’s own dependencies independently of other project’s dependencies. In resume: for not installing globally this modules. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/6aa6c0800b4ad89ae2775f88fa7d1da1/4a29e/python-virtualenv-project-structure.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB8q6GLpRhRUA//8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECERIQ/9oACAEBAAEFAh+XvNldDZQ3p//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABYRAAMAAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwEr/8QAHRAAAQMFAQAAAAAAAAAAAAAAAQAQIgIREiExI//aAAgBAQAGPwJcamNkI46Q8xxg3//EAB0QAAICAgMBAAAAAAAAAAAAAAERACExYRBBcYH/2gAIAQEAAT8hG38iFWFcZEBVEdx1Vo7gFgeIYrQqPmSahMvJ/9oADAMBAAIAAwAAABCj177/xAAWEQADAAAAAAAAAAAAAAAAAAAAEBH/2gAIAQMBAT8QI//EABcRAQADAAAAAAAAAAAAAAAAAAEAEGH/2gAIAQIBAT8QFmr/AP/EABwQAQEAAgMBAQAAAAAAAAAAAAERACExUWFx4f/aAAgBAQABPxAi6R4xlCgBAj6465xpKqAn29/uNqk0Gj7wFgIk5e5BLogXgxo4BCth0YoO8AXcDP/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Python virtualenv&quot;
+        title=&quot;Python virtualenv&quot;
+        src=&quot;/frompat/static/6aa6c0800b4ad89ae2775f88fa7d1da1/828fb/python-virtualenv-project-structure.jpg&quot;
+        srcset=&quot;/frompat/static/6aa6c0800b4ad89ae2775f88fa7d1da1/ff44c/python-virtualenv-project-structure.jpg 158w,
+/frompat/static/6aa6c0800b4ad89ae2775f88fa7d1da1/a6688/python-virtualenv-project-structure.jpg 315w,
+/frompat/static/6aa6c0800b4ad89ae2775f88fa7d1da1/828fb/python-virtualenv-project-structure.jpg 630w,
+/frompat/static/6aa6c0800b4ad89ae2775f88fa7d1da1/4a29e/python-virtualenv-project-structure.jpg 765w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Installation&lt;/h4&gt;
+&lt;p&gt;To install &lt;code class=&quot;language-text&quot;&gt;virtualenv&lt;/code&gt; just run the following command on your project folder (here we use pip on windows):&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;py -3 -m pip install --user virtualenv&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;Creating a Virtual Environment&lt;/h4&gt;
+&lt;p&gt;To create a Virtual Environment name &lt;strong&gt;myproject&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;py -3 -m venv myproject&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You will see a new folder created called &lt;strong&gt;myproject&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;Activation&lt;/h4&gt;
+&lt;p&gt;To activate and use your new virtual environment, just run:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;myproject\Scripts\activate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now you can start to install the modules and packages you want and run your project on the new environment. &lt;/p&gt;
+&lt;p&gt;To install requeriments.txt just this command:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To deactivate &lt;strong&gt;myproject&lt;/strong&gt; just run: &lt;code class=&quot;language-text&quot;&gt;deactivate&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;PostegreSQL&lt;/h2&gt;
+&lt;p&gt;Its also necessary to create a database and &lt;strong&gt;users&lt;/strong&gt; table before anything. I’ve used &lt;a href=&quot;https://www.postgresql.org/&quot;&gt;PostegreSQL&lt;/a&gt; as database and pgAdmin 4 interface to create the DB and table.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 544px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/d1fb21650c74fb1f77da56915b6f8eca/b3e51/pgadmin4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByUlEQVQoz5WS3UuTYRiH99d0FEHiH9BBaOcdddJZoognokZfB0Gk4qQxnc0IY1kbhoFrbgsc1PxY+3g3x5xrzjCnZR+YbWvbu7b3fa+ed6JMScEbfs/NzfNwcT+/+zZomsZpcXgvstagk8KgH8U/BYKRGCvJVaRYnHA0zmIwQrGQrz9SVRVVQNRDIFSrVWS5glypUBH6K2r9nQCqWF6+oanDxPUBOxfbH9Fy8wktfeOYJ2d03H87KeZzSMEAocAS0UiYne0scrksgDWZriEbFzof0z3u5lLfUy7fmqBzbJY7o3Z2dvN8+S3zLVdG2tzjXfon23sl3ouc+prj0/cC8ewvMiIrqqZ3qDFqd9HcNcbVBw5abz/jyl0bvVYnLt881oUt+t0pjG/XuDezyn1XCpNvnYfujwx417D6Nxj0pjHNrfMjL+97qPvX3D5Mj+U11/odnLthZmhyFo/Hi190kt0tMbH4mfnlNNJyAs+ChC8QIxRL8CGawB8SvseTlISndaD+9ymnlxeOV/SOTHG+w4LZNk0mk+GsYTi+AsbnTprajCRWkvVaaZjwwZSPTvyoDAe7VlOUOmBjcwt/IIxSq6E17KF2AuC4/gFD04A2ThY7OwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pgadmin4&quot;
+        title=&quot;pgadmin4&quot;
+        src=&quot;/frompat/static/d1fb21650c74fb1f77da56915b6f8eca/b3e51/pgadmin4.png&quot;
+        srcset=&quot;/frompat/static/d1fb21650c74fb1f77da56915b6f8eca/c26ae/pgadmin4.png 158w,
+/frompat/static/d1fb21650c74fb1f77da56915b6f8eca/6bdcf/pgadmin4.png 315w,
+/frompat/static/d1fb21650c74fb1f77da56915b6f8eca/b3e51/pgadmin4.png 544w&quot;
+        sizes=&quot;(max-width: 544px) 100vw, 544px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Create users table&lt;/h4&gt;
+&lt;p&gt;The SQL for the created users table is the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;users
+&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+  id &lt;span class=&quot;token keyword&quot;&gt;integer&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  username &lt;span class=&quot;token keyword&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;COLLATE&lt;/span&gt; pg_catalog&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;default&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  password &lt;span class=&quot;token keyword&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;COLLATE&lt;/span&gt; pg_catalog&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;default&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;NOT&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;NULL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  roles &lt;span class=&quot;token keyword&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;COLLATE&lt;/span&gt; pg_catalog&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  is_active &lt;span class=&quot;token keyword&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;CONSTRAINT&lt;/span&gt; id &lt;span class=&quot;token keyword&quot;&gt;PRIMARY&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;KEY&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;TABLESPACE&lt;/span&gt; pg_default&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;ALTER&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;users
+    OWNER &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;insert&lt;/span&gt; here your user_database&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After created the table, please insert at least one user, if you prefer to insert it by python you can add the following lines after &lt;code class=&quot;language-text&quot;&gt;cors.init_app(app)&lt;/code&gt; line:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;api.py&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Add user&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;app_context&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create_all&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;session&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;User&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;filter_by&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;username&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;myusername&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;count&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;session&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;add&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;User&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        username&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;my&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        password&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;guard&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;hash_password&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;mypassword&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        roles&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;admin&apos;&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;session&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;commit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;DB Model&lt;/h2&gt;
+&lt;p&gt;A model that might be used using &lt;strong&gt;flask-praetorian&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Model&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    
+    __tablename__ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;users&apos;&lt;/span&gt;
+
+    &lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Column&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Integer&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; primary_key&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    username &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Column&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; unique&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nullable&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    password &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Column&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nullable&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    roles &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Column&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    is_active &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Column&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Boolean&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; default&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; server_default&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;true&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@property&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rolenames&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;roles&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;split&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;except&lt;/span&gt; Exception&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@classmethod&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;lookup&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cls&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; username&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cls&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;filter_by&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;username&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;username&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;one_or_none&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@classmethod&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;identify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cls&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; cls&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;query&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@property&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;identity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;is_valid&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;self&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; self&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;is_active&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Initialize Flask App&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; flask&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Flask&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;__name__&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;debug &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;SECRET_KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;my secret key&apos;&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;JWT_ACCESS_LIFESPAN&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;hours&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;JWT_REFRESH_LIFESPAN&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;days&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Initialize the flask-praetorian instance for the app&lt;/span&gt;
+guard&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;app&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; User&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;SQLAlchemy&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.sqlalchemy.org/&quot;&gt;SQLAlchemy&lt;/a&gt; was used as the Python ORM for accessing data from the database and facilitate the communication between app and db converting function calls to SQL statements.&lt;/p&gt;
+&lt;p&gt;Do not forget to change &lt;strong&gt;&lt;em&gt;‘SQLALCHEMY&lt;em&gt;DATABASE&lt;/em&gt;URI’&lt;/em&gt;&lt;/strong&gt; to your own here:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Initialize a local database&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;SQLALCHEMY_DATABASE_URI&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;postgresql://user_database:password@hostname:5432/database_name&apos;&lt;/span&gt;
+db&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;app&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Initializes CORS so that the api_tool can talk to app&lt;/span&gt;
+cors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;app&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Endpoints&lt;/h2&gt;
+&lt;p&gt;Some endpoints were defined to be consumed by the frontend application, they are:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. /api/&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The first endpoint is the confirmation our API is up running!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;route&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;World&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;2. /api/login&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The second endpoint receives the user credentials (by POST request) and authenticates/logs it with flask-praetorian ‘authenticate’ method issuing a user JWT access token and returning a 200 code with the token;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;route&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api/login&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; methods&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;POST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    Logs a user in by parsing a POST request containing user credentials and
+    issuing a JWT token.
+    &quot;&quot;&quot;&lt;/span&gt;
+    req &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; flask&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_json&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;force&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    username &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;username&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    password &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;password&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    user &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; guard&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;authenticate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;username&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; password&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    ret &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;access_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; guard&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;encode_jwt_token&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; ret&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;3. /api/refresh&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The third endpoint refreshes (by POST request) an existing JWT creating a new one with a new access expiration, returning a 200 code with the new token;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;route&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api/refresh&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; methods&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;POST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;refresh&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    Refreshes an existing JWT by creating a new one that is a copy of the old
+    except that it has a refreshed access expiration.
+    .. example::
+       $ curl http://localhost:5000/api/refresh -X GET \
+         -H &quot;Authorization: Bearer &amp;lt;your_token&gt;&quot;
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;refresh request&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    old_token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Request&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_data&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    new_token &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; guard&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;refresh_jwt_token&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;old_token&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    ret &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;access_token&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; new_token&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; ret&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;4. /api/protected&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The fourth endpoint is a protected endpoint which requires a header with a valid JWT using the &lt;code class=&quot;language-text&quot;&gt;@flask_praetorian.auth_required&lt;/code&gt; decorator. The endpoint returns a message with the current user username as a secret message;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;route&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/api/protected&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token decorator annotation punctuation&quot;&gt;@flask_praetorian&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;auth_required&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;protected&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    A protected endpoint. The auth_required decorator will require a header
+    containing a valid JWT
+    .. example::
+       $ curl http://localhost:5000/api/protected -X GET \
+         -H &quot;Authorization: Bearer &amp;lt;your_token&gt;&quot;
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;message&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;protected endpoint (allowed usr {})&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;flask_praetorian&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current_user&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;username&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Run Flask App&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Run&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; __name__ &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;__main__&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;run&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Running Locally&lt;/h2&gt;
+&lt;p&gt;To run your application locally you can use the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;flask run&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Deploying Application&lt;/h2&gt;
+&lt;p&gt;This application was deployed on &lt;strong&gt;Heroku.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/37aa2307f5601021f0560a681bf73563/d61c2/heroku.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.405063291139236%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAAA4UlEQVQoz5WSTQsBURSG70xMGB9FkeRPGGGHmVJSUhYsWFrJ2sbGUlayMHtLf9JzzTGGTHLq6b3ndD7mnjtKYa66aDJge8q35axjJhifSo4ZiRkSU6ERSMOC4AAdwRJS6k8Lm3oU4+hGe+hDE7+KTqCrh0EPVtCBKQxluAMu+aloZ1sKZ7CVhDp6c5W/Q6+wCfyHHuEEB1jDmXwrcmU/S3AMNfnSOeQgqfdJrIIW9I5lv2VqLDQPRSjJTcMd6sIWhQ40OLch8d/+Xs1ik+QFo6pi/PdezyQveP7n7/Fz4De7AytbajWFn6a0AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;heroku&quot;
+        title=&quot;heroku&quot;
+        src=&quot;/frompat/static/37aa2307f5601021f0560a681bf73563/f058b/heroku.png&quot;
+        srcset=&quot;/frompat/static/37aa2307f5601021f0560a681bf73563/c26ae/heroku.png 158w,
+/frompat/static/37aa2307f5601021f0560a681bf73563/6bdcf/heroku.png 315w,
+/frompat/static/37aa2307f5601021f0560a681bf73563/f058b/heroku.png 630w,
+/frompat/static/37aa2307f5601021f0560a681bf73563/40601/heroku.png 945w,
+/frompat/static/37aa2307f5601021f0560a681bf73563/78612/heroku.png 1260w,
+/frompat/static/37aa2307f5601021f0560a681bf73563/d61c2/heroku.png 1800w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The deployment is not described in this article. You can check the app up and running &lt;a href=&quot;https://jwtlogin-app.herokuapp.com/api/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Flask-praetorian&lt;/h2&gt;
+&lt;p&gt;To let the things easier Flask-praetorian was used to handle the hard logic by itself. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/c07af707e6b56666a970e813169e4da0/df009/flask-praetorian.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.62025316455696%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAiklEQVQY06XPQQrCMBCF4SRKBa3gzhZKraZVEBRFJSCEbpNFSO5/Gn+1PUEHPl54kIER4j8L5EqpJZmJibPCWkrZkDetdR1CqJxzmxhjaa2t6O84o8AeHb79CwdssUMzLs1YeCTfxpgipVR671sWP/u+v9K3uAwfxqzxwGl4d4PfzDDn5JxUU879ALt7DU/+U9TwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;flask-praetorian&quot;
+        title=&quot;flask-praetorian&quot;
+        src=&quot;/frompat/static/c07af707e6b56666a970e813169e4da0/f058b/flask-praetorian.png&quot;
+        srcset=&quot;/frompat/static/c07af707e6b56666a970e813169e4da0/c26ae/flask-praetorian.png 158w,
+/frompat/static/c07af707e6b56666a970e813169e4da0/6bdcf/flask-praetorian.png 315w,
+/frompat/static/c07af707e6b56666a970e813169e4da0/f058b/flask-praetorian.png 630w,
+/frompat/static/c07af707e6b56666a970e813169e4da0/40601/flask-praetorian.png 945w,
+/frompat/static/c07af707e6b56666a970e813169e4da0/78612/flask-praetorian.png 1260w,
+/frompat/static/c07af707e6b56666a970e813169e4da0/df009/flask-praetorian.png 2832w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Among the advantages of using Flask-praetorian in this API (where the most important is undoubtedly allowing to use JWT token for authentication) are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hash passwords for storing in database;&lt;/li&gt;
+&lt;li&gt;Verify plaintext passwords against the hashed, stored versions;&lt;/li&gt;
+&lt;li&gt;Generate authorization tokens upon verification of passwords;&lt;/li&gt;
+&lt;li&gt;Check requests to secured endpoints for authorized tokens;&lt;/li&gt;
+&lt;li&gt;Supply expiration of tokens and mechanisms for refreshing them;&lt;/li&gt;
+&lt;li&gt;Ensure that the users associated with tokens have necessary roles for access;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can check Flask-praetorian documentation here: &lt;a href=&quot;https://flask-praetorian.readthedocs.io/en/latest/index.html#table-of-contents&quot;&gt;Flask-praetorian&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Frontend Application&lt;/h2&gt;
+&lt;p&gt;For now the ReactJS application (check the other repository) that consumes this Flask API provides three different pages:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The &lt;code class=&quot;language-text&quot;&gt;Home page&lt;/code&gt; with the login button (if the user isn’t logged) and with the secret button and the logout button (assuming the user is logged);&lt;/li&gt;
+&lt;li&gt;The &lt;code class=&quot;language-text&quot;&gt;Login Page&lt;/code&gt; where the user can log-in;&lt;/li&gt;
+&lt;li&gt;The &lt;code class=&quot;language-text&quot;&gt;Protected page&lt;/code&gt; with a content message that only the logged user can view;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can check the whole jwtlogin flask application code in this** &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask&quot;&gt;github repository&lt;/a&gt;** and the deployed on its description link;&lt;/p&gt;
+&lt;p&gt;Link inspirations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://yasoob.me/posts/how-to-setup-and-deploy-jwt-auth-using-react-and-flask/&quot;&gt;Setting up &amp;#x26; Deploying JWT based auth using Flask &amp;#x26; React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/&quot;&gt;Flask by Example – Setting up Postgres, SQLAlchemy, and Alembic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ckraczkowsky.medium.com/building-a-secure-admin-interface-with-flask-admin-and-flask-security-13ae81faa05&quot;&gt;Building a secure admin interface with Flask-Admin and Flask-Security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/analytics-vidhya/heroku-deploy-your-flask-app-with-a-database-online-d19274a7a749&quot;&gt;Heroku: Deploy your Flask App with a Database Online&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb&quot;&gt;Getting Started with Heroku, Postgres and PgAdmin — RUN__ON Part 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Using Netlify CMS to manage my blog posts]]></title><description><![CDATA[Since I started to think of writing some guides about everything I was learning and doing, I saw the need of starting my own blog to…]]></description><link>https://patriciadourado.com/blog/using-netlify-cms-to-manage-my-blog-posts/</link><guid isPermaLink="false">https://patriciadourado.com/blog/using-netlify-cms-to-manage-my-blog-posts/</guid><pubDate>Wed, 13 Jan 2021 11:27:08 GMT</pubDate><content:encoded>&lt;p&gt;Since I started to think of writing some guides about everything I was learning and doing, I saw the need of starting my own blog to document my steps and help myself to remind things I’ve already done without losing too much time learning again from different sources. &lt;/p&gt;
 &lt;p&gt;So, after searching between &lt;a href=&quot;https://gohugo.io/&quot;&gt;Hugo&lt;/a&gt; and &lt;a href=&quot;https://www.gatsbyjs.com/&quot;&gt;Gatsby&lt;/a&gt; and once I was familiar with React and NPM, to make things easier I chose to use a Gatsby boilerplate blog (&lt;a href=&quot;https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog&quot;&gt;gatsby-starter-blog&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
