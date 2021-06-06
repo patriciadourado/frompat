@@ -5,6 +5,8 @@ description: A Flask JWT based login authentication using flask-praetorian
   module to handle the hard part and SQLAlchemy as ORM with PostreSQL as
   database.
 ---
+This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework **Flask**.
+
 Before running the Flask API its necessary to install a bunch of packages as you can check listed here [requirements.txt](https://github.com/patriciadourado/jwtlogin-flask/blob/master/requirements.txt).
 
 ## Python Virtual Environment
@@ -54,36 +56,18 @@ The SQL for the created users table is the following:
 ```SQL
 CREATE TABLE public.users
 (
-  id integer NOT NULL,
-  username text COLLATE pg_catalog."default" NOT NULL,
-  password text COLLATE pg_catalog."default" NOT NULL,
-  roles text COLLATE pg_catalog."default",
-  is_active boolean,
-  CONSTRAINT id PRIMARY KEY (id)
+    id integer NOT NULL DEFAULT nextval('users_id_seq'::regclass),
+    username text COLLATE pg_catalog."default" NOT NULL,
+    password text COLLATE pg_catalog."default" NOT NULL,
+    roles text COLLATE pg_catalog."default",
+    is_active boolean,
+    CONSTRAINT users_pkey PRIMARY KEY (id)
 )
 
 TABLESPACE pg_default;
 
 ALTER TABLE public.users
     OWNER to (insert here your user_database)
-```
-
-After created the table, please insert at least one user, if you prefer to insert it by python you can add the following lines after `cors.init_app(app)` line:
-
-**api.py**
-
-```python
-# Add user
-with app.app_context():
-  db.create_all()
-  if db.session.query(User).filter_by(username='myusername').count() < 1:
-      db.session.add(User(
-        id=1,
-        username='my',
-        password=guard.hash_password('mypassword'),
-        roles='admin'
-          ))
-  db.session.commit()
 ```
 
 ## DB Model
@@ -224,6 +208,36 @@ def protected():
     return {'message': 'protected endpoint (allowed usr {})'.format(flask_praetorian.current_user().username)}
 ```
 
+**5. /api/registration**
+
+The fifth endpoint is a simple user registration without requiring user email (for now), with the password hash method being invoked only to demonstrate insertion into database if its a new user;
+
+```python
+@app.route('/api/registration', methods=['POST'])
+def registration():
+    
+    """Register user without validation email, only for test"""
+
+    req = flask.request.get_json(force=True)
+    username = req.get('username', None)
+    password = req.get('password', None)
+    
+    with app.app_context():
+        db.create_all()
+        if db.session.query(User).filter_by(username=username).count() < 1:
+            db.session.add(User(
+                username=username,
+                password=guard.hash_password(password),
+                roles='user'
+            ))
+        db.session.commit()
+    
+    user = guard.authenticate(username, password)
+    ret = {'access_token': guard.encode_jwt_token(user)}
+
+    return ret,200
+```
+
 ## Run Flask App
 
 ```python
@@ -265,13 +279,13 @@ You can check Flask-praetorian documentation here: [Flask-praetorian](https://fl
 
 ## Frontend Application
 
-For now the ReactJS application (check the other repository) that consumes this Flask API provides three different pages:
+For now the ReactJS application (check the repository [here](https://github.com/patriciadourado/jwtlogin-reactjs)) that consumes this Flask API provides three different pages:
 
 1. The `Home page` with the login button (if the user isn't logged) and with the secret button and the logout button (assuming the user is logged);
 2. The `Login Page` where the user can log-in;
 3. The `Protected page` with a content message that only the logged user can view;
 
-**Note:** You can check the whole jwtlogin flask application code in this** [github repository](https://github.com/patriciadourado/jwtlogin-flask)** and the deployed on its description link;
+**Note:** You can check the whole jwtlogin flask application code in this** [github repository](https://github.com/patriciadourado/jwtlogin-flask)** and the deployed with ReactJS part on its description link;
 
 Link inspirations:
 
