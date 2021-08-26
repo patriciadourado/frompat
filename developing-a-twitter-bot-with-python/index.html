@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/frompat/styles.ee5ff89e7fe06c33eb77.css">@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:100;src:local("Montserrat Thin "),local("Montserrat-Thin"),url(/frompat/static/montserrat-latin-100-191cc9f50f3b76b9617cb383f19acb7d.woff2) format("woff2"),url(/frompat/static/montserrat-latin-100-370318464551d5f25b0f0a78f374faac.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:100;src:local("Montserrat Thin italic"),local("Montserrat-Thinitalic"),url(/frompat/static/montserrat-latin-100italic-bdeaeb79db315697bd173a55b097dc18.woff2) format("woff2"),url(/frompat/static/montserrat-latin-100italic-ecf7d49386e8f265878e735db34a7c4b.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:200;src:local("Montserrat Extra Light "),local("Montserrat-Extra Light"),url(/frompat/static/montserrat-latin-200-85d5ef9db7f2dc6979172a4a3b2c57cb.woff2) format("woff2"),url(/frompat/static/montserrat-latin-200-1fc98e126a3d152549240e6244d7e669.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:200;src:local("Montserrat Extra Light italic"),local("Montserrat-Extra Lightitalic"),url(/frompat/static/montserrat-latin-200italic-49095760a498d024fe1a85a078850df9.woff2) format("woff2"),url(/frompat/static/montserrat-latin-200italic-fe46cf8b9462c820457d3bf537e4057f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:300;src:local("Montserrat Light "),local("Montserrat-Light"),url(/frompat/static/montserrat-latin-300-7c3daf12b706645b5d3710f863a4da04.woff2) format("woff2"),url(/frompat/static/montserrat-latin-300-8dc95fab9cf98d02ca8d76e97d3dff60.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:300;src:local("Montserrat Light italic"),local("Montserrat-Lightitalic"),url(/frompat/static/montserrat-latin-300italic-f20b178ca2024a5eac8e42e6649db86c.woff2) format("woff2"),url(/frompat/static/montserrat-latin-300italic-3fe16939288856e8e828fa2661bf2354.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:400;src:local("Montserrat Regular "),local("Montserrat-Regular"),url(/frompat/static/montserrat-latin-400-bc3aa95dca08f5fee5291e34959c27bc.woff2) format("woff2"),url(/frompat/static/montserrat-latin-400-8102c4838f9e3d08dad644290a9cb701.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:400;src:local("Montserrat Regular italic"),local("Montserrat-Regularitalic"),url(/frompat/static/montserrat-latin-400italic-5cad650422a7184467af5a4d17b264c4.woff2) format("woff2"),url(/frompat/static/montserrat-latin-400italic-d191f22af3bb50902b99ac577f81a322.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:500;src:local("Montserrat Medium "),local("Montserrat-Medium"),url(/frompat/static/montserrat-latin-500-92d16e458625f4d2c8940f6bdca0ff09.woff2) format("woff2"),url(/frompat/static/montserrat-latin-500-8b763220218ffc11c57c84ddb80e7b26.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:500;src:local("Montserrat Medium italic"),local("Montserrat-Mediumitalic"),url(/frompat/static/montserrat-latin-500italic-47bfcca6b69d6a9acca7a8bff17193e2.woff2) format("woff2"),url(/frompat/static/montserrat-latin-500italic-72c01f753c3940c0b9cb6bf2389caddf.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:600;src:local("Montserrat SemiBold "),local("Montserrat-SemiBold"),url(/frompat/static/montserrat-latin-600-6fb1b5623e528e27c18658fecf5ee0ee.woff2) format("woff2"),url(/frompat/static/montserrat-latin-600-7c839d15a6f54e7025ba8c0c4b333e8f.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:600;src:local("Montserrat SemiBold italic"),local("Montserrat-SemiBolditalic"),url(/frompat/static/montserrat-latin-600italic-60789af1c9338ed1a9546722ec54b4f7.woff2) format("woff2"),url(/frompat/static/montserrat-latin-600italic-f3d4de8d0afb19e777c79032ce828e3d.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:700;src:local("Montserrat Bold "),local("Montserrat-Bold"),url(/frompat/static/montserrat-latin-700-39d93cf678c740f9f6b2b1cfde34bee3.woff2) format("woff2"),url(/frompat/static/montserrat-latin-700-80f10bd382f0df1cd650fec59f3c9394.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:700;src:local("Montserrat Bold italic"),local("Montserrat-Bolditalic"),url(/frompat/static/montserrat-latin-700italic-ba136d97b14e82284dd595e257f11c47.woff2) format("woff2"),url(/frompat/static/montserrat-latin-700italic-8c98142b425630821139c24bd1698700.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold "),local("Montserrat-ExtraBold"),url(/frompat/static/montserrat-latin-800-b7018be9ed6cd94da8b6675b3a468c3b.woff2) format("woff2"),url(/frompat/static/montserrat-latin-800-9a9befcf50d64f9d2d19d8b1d1984add.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:800;src:local("Montserrat ExtraBold italic"),local("Montserrat-ExtraBolditalic"),url(/frompat/static/montserrat-latin-800italic-540ffdd223d1a9ad3d4e678e1a23372e.woff2) format("woff2"),url(/frompat/static/montserrat-latin-800italic-897086f99f4e1f45e6b1e9368527d0bc.woff) format("woff")}@font-face{font-family:Montserrat;font-style:normal;font-display:swap;font-weight:900;src:local("Montserrat Black "),local("Montserrat-Black"),url(/frompat/static/montserrat-latin-900-58cd789700850375b834e8b6776002eb.woff2) format("woff2"),url(/frompat/static/montserrat-latin-900-26d42c9428780e545a540bbb50c84bce.woff) format("woff")}@font-face{font-family:Montserrat;font-style:italic;font-display:swap;font-weight:900;src:local("Montserrat Black italic"),local("Montserrat-Blackitalic"),url(/frompat/static/montserrat-latin-900italic-451157bc8861fe54f523b3669a3def71.woff2) format("woff2"),url(/frompat/static/montserrat-latin-900italic-a8ec4957e1c24f5793305763ad9845b3.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:300;src:local("Merriweather Light "),local("Merriweather-Light"),url(/frompat/static/merriweather-latin-300-b1158cfcd4aacb9d8fb61625e37af46a.woff2) format("woff2"),url(/frompat/static/merriweather-latin-300-cc7de05e166e90320d7d896e0f72a19d.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:300;src:local("Merriweather Light italic"),local("Merriweather-Lightitalic"),url(/frompat/static/merriweather-latin-300italic-8fe52a48089d6ebe46db0b8e7cc66263.woff2) format("woff2"),url(/frompat/static/merriweather-latin-300italic-e1331f5397c2a673f9d3765138debdb5.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:400;src:local("Merriweather Regular "),local("Merriweather-Regular"),url(/frompat/static/merriweather-latin-400-8276fdb72ae8f4714d4e6eba704cc39f.woff2) format("woff2"),url(/frompat/static/merriweather-latin-400-69f09800f4f6479d06e44eba837df872.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:400;src:local("Merriweather Regular italic"),local("Merriweather-Regularitalic"),url(/frompat/static/merriweather-latin-400italic-3a9be9ea9f7aa4af6de7307df21d9fc0.woff2) format("woff2"),url(/frompat/static/merriweather-latin-400italic-d76079ed7541a433a54f79316de086e9.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:700;src:local("Merriweather Bold "),local("Merriweather-Bold"),url(/frompat/static/merriweather-latin-700-fa534be7ffa380e39a7f6e03bf9a5e03.woff2) format("woff2"),url(/frompat/static/merriweather-latin-700-ba56ea84b8084b7ff9677f50d3cd81bd.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:700;src:local("Merriweather Bold italic"),local("Merriweather-Bolditalic"),url(/frompat/static/merriweather-latin-700italic-1ef5edaaa20ae53ea50399884c5e48c6.woff2) format("woff2"),url(/frompat/static/merriweather-latin-700italic-534bc9e7ce93c73d73426e46acd78092.woff) format("woff")}@font-face{font-family:Merriweather;font-style:normal;font-display:swap;font-weight:900;src:local("Merriweather Black "),local("Merriweather-Black"),url(/frompat/static/merriweather-latin-900-7528fb70e8a4a82c7305e72ff43ac25f.woff2) format("woff2"),url(/frompat/static/merriweather-latin-900-3799b6e2f5ed3fcccf9d7a708d7419fa.woff) format("woff")}@font-face{font-family:Merriweather;font-style:italic;font-display:swap;font-weight:900;src:local("Merriweather Black italic"),local("Merriweather-Blackitalic"),url(/frompat/static/merriweather-latin-900italic-e1b4d2aaa78e12ad84aaf8a56321e4c2.woff2) format("woff2"),url(/frompat/static/merriweather-latin-900italic-2ae22f731b3424e8dbb4b37f7ca6e708.woff) format("woff")}
+
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden]{display:none}:root{--maxWidth-none:"none";--maxWidth-xs:20rem;--maxWidth-sm:24rem;--maxWidth-md:28rem;--maxWidth-lg:32rem;--maxWidth-xl:36rem;--maxWidth-2xl:42rem;--maxWidth-3xl:48rem;--maxWidth-4xl:56rem;--maxWidth-full:"100%";--maxWidth-wrapper:var(--maxWidth-2xl);--spacing-px:"1px";--spacing-0:0;--spacing-1:0.25rem;--spacing-2:0.5rem;--spacing-3:0.75rem;--spacing-4:1rem;--spacing-5:1.25rem;--spacing-6:1.5rem;--spacing-8:2rem;--spacing-10:2.5rem;--spacing-12:3rem;--spacing-16:4rem;--spacing-20:5rem;--spacing-24:6rem;--spacing-32:8rem;--fontFamily-sans:Montserrat,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--fontFamily-serif:"Merriweather","Georgia",Cambria,"Times New Roman",Times,serif;--font-body:var(--fontFamily-serif);--font-heading:var(--fontFamily-sans);--fontWeight-normal:400;--fontWeight-medium:500;--fontWeight-semibold:600;--fontWeight-bold:700;--fontWeight-extrabold:800;--fontWeight-black:900;--fontSize-root:16px;--lineHeight-none:1;--lineHeight-tight:1.1;--lineHeight-normal:1.5;--lineHeight-relaxed:1.625;--fontSize-0:0.833rem;--fontSize-1:1rem;--fontSize-2:1.2rem;--fontSize-3:1.44rem;--fontSize-4:1.728rem;--fontSize-5:2.074rem;--fontSize-6:2.488rem;--fontSize-7:2.986rem;--color-primary:#005b99;--color-text:#2e353f;--color-text-light:#4f5969;--color-heading:#1a202c;--color-heading-black:#000;--color-accent:#d1dce5}*,:after,:before{box-sizing:border-box}html{line-height:var(--lineHeight-normal);font-size:var(--fontSize-root);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{font-family:var(--font-body);font-size:var(--fontSize-1);color:var(--color-text)}footer{padding:var(--spacing-6) var(--spacing-0)}hr{background:var(--color-accent);height:1px;border:0}h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);margin-top:var(--spacing-12);margin-bottom:var(--spacing-6);line-height:var(--lineHeight-tight);letter-spacing:-.025em}h2,h3,h4,h5,h6{font-weight:var(--fontWeight-bold);color:var(--color-heading)}h1{font-weight:var(--fontWeight-black);font-size:var(--fontSize-6);color:var(--color-heading-black)}h2{font-size:var(--fontSize-5)}h3{font-size:var(--fontSize-4)}h4{font-size:var(--fontSize-3)}h5{font-size:var(--fontSize-2)}h6{font-size:var(--fontSize-1)}h1>a,h2>a,h3>a,h4>a,h5>a,h6>a{color:inherit;text-decoration:none}p{line-height:var(--lineHeight-relaxed);--baseline-multiplier:0.179;--x-height-multiplier:0.35;margin:var(--spacing-0) var(--spacing-0) var(--spacing-8) var(--spacing-0)}ol,p,ul{padding:var(--spacing-0)}ol,ul{margin-left:var(--spacing-0);margin-right:var(--spacing-0);margin-bottom:var(--spacing-8);list-style-position:outside;list-style-image:none}ol li,ul li{padding-left:var(--spacing-0)}li>p,ol li,ul li{margin-bottom:calc(var(--spacing-8)/2)}li :last-child{margin-bottom:var(--spacing-0)}li>ul{margin-left:var(--spacing-8);margin-top:calc(var(--spacing-8)/2)}blockquote{color:var(--color-text-light);margin-left:calc(var(--spacing-6)*-1);margin-right:var(--spacing-8);padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);border-left:var(--spacing-1) solid var(--color-primary);font-size:var(--fontSize-2);font-style:italic;margin-bottom:var(--spacing-8)}blockquote>:last-child{margin-bottom:var(--spacing-0)}blockquote>ol,blockquote>ul{list-style-position:inside}table{width:100%;margin-bottom:var(--spacing-8);border-collapse:collapse;border-spacing:.25rem}table thead tr th{border-bottom:1px solid var(--color-accent)}a{color:var(--color-primary)}a:focus,a:hover{text-decoration:none}.global-wrapper{margin:var(--spacing-0) auto;max-width:var(--maxWidth-wrapper);padding:var(--spacing-10) var(--spacing-5)}.global-wrapper[data-is-root-path=true] .bio{margin-bottom:var(--spacing-20)}.global-header{margin-bottom:var(--spacing-12)}.main-heading{font-size:var(--fontSize-7);margin:0}.post-list-item{margin-bottom:var(--spacing-8);margin-top:var(--spacing-8)}.post-list-item p{margin-bottom:var(--spacing-0)}.post-list-item h2{font-size:var(--fontSize-4);color:var(--color-primary);margin-bottom:var(--spacing-2);margin-top:var(--spacing-0)}.post-list-item header{margin-bottom:var(--spacing-4)}.header-link-home{font-weight:var(--fontWeight-bold);font-family:var(--font-heading);text-decoration:none;font-size:var(--fontSize-2)}.bio{display:flex;margin-bottom:var(--spacing-16)}.bio-avatar,.bio p{margin-bottom:var(--spacing-0)}.bio-avatar{margin-right:var(--spacing-4);min-width:50px;border-radius:100%}.blog-post header h1{margin:var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0)}.blog-post header p{font-size:var(--fontSize-2);font-family:var(--font-heading)}.blog-post-nav ul{margin:var(--spacing-0)}.gatsby-highlight{margin-bottom:var(--spacing-8)}@media (max-width:42rem){blockquote{padding:var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);margin-left:var(--spacing-0)}ol,ul{list-style-position:inside}}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.26.1"/><link rel="alternate" type="application/rss+xml" href="/frompat/rss.xml"/><link rel="icon" href="/frompat/favicon-32x32.png?v=916504c081aa229c7c390c3f6b73f17f" type="image/png"/><link rel="manifest" href="/frompat/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/frompat/icons/icon-48x48.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="72x72" href="/frompat/icons/icon-72x72.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="96x96" href="/frompat/icons/icon-96x96.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="144x144" href="/frompat/icons/icon-144x144.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="192x192" href="/frompat/icons/icon-192x192.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="256x256" href="/frompat/icons/icon-256x256.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="384x384" href="/frompat/icons/icon-384x384.png?v=916504c081aa229c7c390c3f6b73f17f"/><link rel="apple-touch-icon" sizes="512x512" href="/frompat/icons/icon-512x512.png?v=916504c081aa229c7c390c3f6b73f17f"/><title data-react-helmet="true">Developing a Twitter bot with Python</title><meta data-react-helmet="true" name="title" content="A Twitter bot developed in Python using Tweepy library to make requests to the Twitter API. This bot will make requests to POST and GET endpoints for tweet, reply, retweet, like and get tweets."/><meta data-react-helmet="true" name="description" content="A Twitter bot developed in Python using Tweepy library to make requests to the Twitter API. This bot will make requests to POST and GET endpoints for tweet, reply, retweet, like and get tweets."/><meta data-react-helmet="true" name="thumbnail"/><meta data-react-helmet="true" property="og:title" content="Developing a Twitter bot with Python"/><meta data-react-helmet="true" property="og:description" content="A Twitter bot developed in Python using Tweepy library to make requests to the Twitter API. This bot will make requests to POST and GET endpoints for tweet, reply, retweet, like and get tweets."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://patriciadourado.com/frompat"/><meta data-react-helmet="true" property="og:image"/><meta data-react-helmet="true" property="og:image:type" content="image/png"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="static_pat"/><meta data-react-helmet="true" name="twitter:title" content="Developing a Twitter bot with Python"/><meta data-react-helmet="true" name="twitter:image"/><meta data-react-helmet="true" name="twitter:url" content="https://patriciadourado.com/frompat"/><meta data-react-helmet="true" name="twitter:description" content="A Twitter bot developed in Python using Tweepy library to make requests to the Twitter API. This bot will make requests to POST and GET endpoints for tweet, reply, retweet, like and get tweets."/><link as="script" rel="preload" href="/frompat/webpack-runtime-82787fe3a9aeb5a59041.js"/><link as="script" rel="preload" href="/frompat/styles-55e82d6ff5158c00b714.js"/><link as="script" rel="preload" href="/frompat/framework-de237a875aa45b276a9d.js"/><link as="script" rel="preload" href="/frompat/532a2f07-8d0154c2cf59560b38a4.js"/><link as="script" rel="preload" href="/frompat/app-14fe37a2a3c558faab89.js"/><link as="script" rel="preload" href="/frompat/commons-907cc91e96bd82e1e73d.js"/><link as="script" rel="preload" href="/frompat/cd7d5f864fc9e15ed8adef086269b0aeff617554-b16e6efee4a992b32cbb.js"/><link as="script" rel="preload" href="/frompat/component---src-templates-blog-post-js-885b4c403245d58aef51.js"/><link as="fetch" rel="preload" href="/frompat/page-data\developing-a-twitter-bot-with-python\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/frompat/page-data/sq/d/3991963069.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/frompat/page-data/sq/d/916993862.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/frompat/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="global-wrapper" data-is-root-path="false"><header class="global-header"><a class="header-link-home" href="/frompat/">from Pat</a></header><main><article class="blog-post" itemscope="" itemType="http://schema.org/Article"><header><h1 itemProp="headline">Developing a Twitter bot with Python</h1><p>August 27, 2021</p></header><section itemProp="articleBody"><p>In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.</p>
+<h2>Twitter</h2>
+<p>Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/a7a19/twitter-fail-whale.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 68.35443037974683%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsSAAALEgHS3X78AAACoUlEQVQoz2WR6U8TQRiH+3f6TSUExAomYkwMn8REQwyXQIvFGNvCUqBLjxCRtN3ubi8rFBVoUWjpXrM72z26ZSldejitRiBOfpnjfeeZ9xibR1Lm+KoDVN8wtQnWmOR0hyA5WPC/FhjhppwssAUqKi4afmCsAcPD65igujnRw/AeVvjI8G5GcKNNmXMzvJcTVwQJE6RVAH0AfuBF2yetysiwXDqtyFIVipBndQlUKkpFlkWWkYGgyVARgSZJjXq90+m0222r2URrXNFtK5KiX10hq1qvB0rFQPF0lRPow73I0f5mqRgunvjL5Q2O3yyXQ2clf/E0C6VOb5AIdgKoWBY6nBnGfTJ+LxYdX3v/etnxZAsfwz1juLePiE65px9v4Xdp6k5kZ+7g4BpGNVd7kdlabSSZsCcTL7c3R9Oph7nvs0HPRAibCXgnQ9goRQynkgMUuVQoXMN++S/M1GqPErQ9QQ9lMn3xWD9FjnwOPyd2Rqn4IuYcTGeGE3Q/GXfl89ewV5L/pI3g4WTiAU09Tac2SsUIxzoKx/Z0+lkm9SK0OrU8P0DTfXHiFuyTFc26+gejt7/0WtJst7s3BGG9VKJ5boqOjedyqBzn0dGNhvGi0uhFNgyU9iBFhstndctqtlqdVsuwGvOHB0lRLJrmLpRQ5os3YRcH1B7MmiaChyhykCRe7ed8v44TgC+olSTPTv/4ZqfiqB3oL5byt2F42Wh1Orqh7eKL2fWFr763qQ1HEpvJ4s49vyOPL+wHXVnfLPJmsOmf6e1Gt6I2oWg2FwtOzAvYsKSLumbWNPMcSTfPFaMKdRXqhqgZaO7Zu17lwhQuG6jSbVm1vWMBWmKKFlW0iKJ3pVYjqr4lwDAvhLlKkFXDnNqzdxXt3tEIVcMA/A2U7bMCeH85UgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Twitter fail whale"
+        title="Twitter Whale"
+        src="/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/f058b/twitter-fail-whale.png"
+        srcset="/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/c26ae/twitter-fail-whale.png 158w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/6bdcf/twitter-fail-whale.png 315w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/f058b/twitter-fail-whale.png 630w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/40601/twitter-fail-whale.png 945w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/78612/twitter-fail-whale.png 1260w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/a7a19/twitter-fail-whale.png 1323w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Twitter is used today for many things, from voting for awards, promoting protests, drawing the world’s attention to some catastrophic situation, sharing memes, FAKE NEWS, revealing talent and even reporting crimes in inaccessible or unsafe places, contributing a lot to journalistic work and of the police.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/2a333/trump-tweet.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABSUlEQVQoz42RuU7DQBCG/bKUiAYKChp6JBBItIiKjtcgMspFdh1fEbYDKYiddXzs6TUTx0AUgsInFzPj+T3zjw0ueDyfE0KEFPUXWuvvuPoD6DFMs3NxdnJzfmqaZhRFjuOEYZgkyWQymYaB9ZZmvIKvrXo3ALGUyuibncujg6vjw6c+cj3vudsb224YTceOizCOPpZc6Vpv04il4b0GD7fXj/d370uuKyWUElJSyuA1BG3jrp1Xa2/Y+/G5aV7/ukJbBzHYQyNk2/ZgMHAdF1sYnEOKMR4OX4IwQAh1e73RCLmuZ9sOtM1ms/UhDcZYHMdRQ1EUZVlSSiHIGzjnWZbN4xjqRQMUoaGdDInv+zDKsizKaP0/WrFUKi9KISQTgjIGoyGFR1WV3ocBiyULsszzBUmzvCBpCkFCiFJqv3h9xq1j1rt/0DafsdpwrYcaOfkAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="wtf is Covfefe"
+        title="wtf is Covfefe"
+        src="/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/f058b/trump-tweet.png"
+        srcset="/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/c26ae/trump-tweet.png 158w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/6bdcf/trump-tweet.png 315w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/f058b/trump-tweet.png 630w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/40601/trump-tweet.png 945w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/78612/trump-tweet.png 1260w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/2a333/trump-tweet.png 1484w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>As it is a place full of users of different ages, but predominantly young, large companies use twitter for advertising, sales and, of course, answering possible complaints about their products in an automated and ‘modern’ way, full of memes of the moment.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAACYUlEQVQozw2RWU8TYRSG5/d443IjRUG21rK0033aaWcGOi3TdtqhHSoULYVKVSC4YjSKYgxaFPcYE40RYgyI0f/0+F2d5D15kuecVxq46EX3nWLLUfjRKXLTitJKDhIdOMmgHKWqyzx0s7yZM7mqTrBheBnqOYHXP0TWf4ZuXeNb22LVlLmsDCDFEzJ2wkdDDfLCVWlngqxpo9jjHgaDUZZtjc9XLL4v2fxZddm2ExjhYTQ1RDE2QksPsVNTWVIDrApO8geDtAtJ9tsV9moGP5dtPs/qGP2n6Qsk6TTrfF+p8Lvt8O9Ok6d1k/iEl0gszFo5zYHgdmd0jjoOXVtB6h0NU86E2cwr7FWmeFvLsZWLYfp66RkVJ+c1FrNRXpXS7M3naaYDyCN9DAQiuFqIRwWRVyZ57+a4Nykj9YzFKEymuGMl+GBneCZsF1U/0WEPF0Iq2YzCohZgU+w3rTjl8CDjw+eEfYIZM8V9kX8U3GMxLyk+pIBRolYw2J03+XWjRrdhcdtJERnrxa9OM1Mw2XEzHK7NsetOsT7lF4YeItkyDXuSdws5Dq5V6S4UuF6MIQW1InUrw8eWzf5yhaP1eXbmslQyAXwJk9liVpxqcrAyw2GnypNCmHzch6xZtGydL0tlwZUF1+CR6EA6L6s4VYdPq3WOlkr8vdXgnmNQFK35lCy2U2WvZXEsnv/3bpONfBw90M9QTGeu7vBVcL9FkceC6+STSGcnkmTSCUqhfp5X0rwUdq46Ti5+Ec+EQlKJUZL7eDCd4EUjz4IRQpeHOSdEjFQEJ3yB18Js2zVwkuP8B1riloY+8VdwAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Narazé Tedesco"
+        title="Narazé Tedesco"
+        src="/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png"
+        srcset="/frompat/static/0873a7ad99860135440d5d08368648a2/c26ae/nazare-tedesco.png 158w,
+/frompat/static/0873a7ad99860135440d5d08368648a2/6bdcf/nazare-tedesco.png 315w,
+/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png 600w"
+        sizes="(max-width: 600px) 100vw, 600px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>Badly programmed bot</h3>
+<p>The growing use of bots is notable from well-programmed ones to big flops. As in the case of the Brazilian company Decolar, which responded to the user by referring to him/her through his ‘nickname’, which was a loophole for people to put insults in his name and make the company’s official profile tweet the insult when responding, the user changed its nickname and printed the company tweet like: “wow free insults”;</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 595px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/1bf8ab5669d166348152e5b0db919da6/3dd3e/decolar-bot.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABJ0AAASdAHeZh94AAABj0lEQVQoz4WQz3LTMBDGZTdObMtSmbSJRVL/lxTLxk7iiYOTAQ658iS8Rs+99Dl4DM48Bg/AgTN8aRlmWgaq8eysvPrtft+S2/ffPvqfuX/drpuqqo0xp9OJc07+eyzLsm2bfP/6827/Q1jvVJUqVWZZnqSZ4zjkpQOefKq/fBjf27bDOPcDBO6Oxy9y58jnxBl5E9+hjDLG3cn4wuPkMrQuhf0QLZf9HvI3fBURz/c8nwYB9yidAKZTwsT586bk1Q1x+T8nT5cEG1osFofDoes6qaSWsmubutR9t1m+Fm/7XV3XSunRaPQcvo6JlEUcx1JKtMjzXK9Wq9KEociLIhQiTTNUZ7NZEASU0j/0ObgBWa/Xbdtut1vGmDFV0zSbzQZylFLDMOz3+7p+UxQFkr7vn/vHI9TAI4miWOuVEGGWZUmSPMpBFU2ThzOfh0/4sjRVVZnK4KnWZ9VJkiLBFYKFEGCURmcFObDzBMbMYTgslzdlWUZRBG3H4xFedrsdLMAOfmJnyAGjitXC/2OLX0zvO1yRo798AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Decolar Bot"
+        title="Decolar Bot"
+        src="/frompat/static/1bf8ab5669d166348152e5b0db919da6/3dd3e/decolar-bot.png"
+        srcset="/frompat/static/1bf8ab5669d166348152e5b0db919da6/c26ae/decolar-bot.png 158w,
+/frompat/static/1bf8ab5669d166348152e5b0db919da6/6bdcf/decolar-bot.png 315w,
+/frompat/static/1bf8ab5669d166348152e5b0db919da6/3dd3e/decolar-bot.png 595w"
+        sizes="(max-width: 595px) 100vw, 595px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Translated tweet: <em>“Ok, selena gomez is not an artist.. Our team is working to offer your all the possible alternatives.”</em></p>
+<p>Something very important for the visibility of your brand, profile, account is engagement and to have it you must keep your account always active. You can do this manually or rest with the use of a Twitter bot.</p>
+<h2>Twitter API</h2>
+<p>With this API you are able to retrieve, analyze data, write tweets programmatically.</p>
+<blockquote>
+<p>The Twitter API provides the tools you need to contribute to, engage with, and analyze the conversation happening on Twitter.</p>
+</blockquote>
+<p>To start our bot, first of all you need to create (if you don’t have one) a twitter account and then you must apply for a developer account to have your user case approved. </p>
+<p>After that you have to create a Twitter Application through <a href="https://apps.twitter.com/app/new">Twitter API for developers website</a>. </p>
+<h5>Create an App</h5>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/fb1ef/twitter-developer.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABJ0AAASdAHeZh94AAAA4klEQVQoz82QwWrCQBCG9020JojQdzK66KFe9RYQBM3Jg/gGJUIhkt36EqJtiA/hI8hGY7Iznd3G9ij11Nmfn2+Gfw6zrOsK7kqvFntP4uU56rdk15W8+d6ux+26IPeMG1Gg4wjuiEFT8kbcc19Z6O9D/yMcJyv/czPfyvkhmqbrWRrNjBsFh3VAnkakSbIc7ft8uxju3sYJQ8QSQEGO9wqsnxGPiFfLTBdQ5IU6qUydL/QyK1XBJavgmhe6BApDCQjGiRn+veAGjyzjP1im439uAKi6X7BsJ6htTtNn6e8wfgFQOt88MgLXRwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Twitter Developer"
+        title="Twitter Developer"
+        src="/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/f058b/twitter-developer.png"
+        srcset="/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/c26ae/twitter-developer.png 158w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/6bdcf/twitter-developer.png 315w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/f058b/twitter-developer.png 630w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/40601/twitter-developer.png 945w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/78612/twitter-developer.png 1260w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/fb1ef/twitter-developer.png 1879w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h5>Choose type of app</h5>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/f4bbf4a91dfd32259354924d386445ac/05d4a/choose-type.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 48.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAABJ0AAASdAHeZh94AAABMUlEQVQoz8VSS0vDQBDeH1D14EHTHApqH1hKbbXUiohSvHjutUf9rSKeFLxVRS2CCU2bNNnsa9YvjWA9CN78GOa5387ssKxzerHV6BWc8mB4ZX+HMSSElFJlohTMx+iRNQ77brVdcCrfZMqQ2yCYer7veV4YRovcD7By67hU766X6oPh5XIBTKV0nPA0FZynScLRkywtH2CV9slu56xYaeedNVHMxdv4nQtliIy1wTScBDNDmNwi6fsTaG2yW1i9228enbu1g5yMZDCbX9/chvMEbPQaPb08v46VsQijOL27f5hF8YJrmVNuudX9Nbf21dkQF3qepKnU8KVGqCBSG60J08Rc5qWMvLHdBH9leWF/Btvc2cODV4vV/yZrwBh8A0juQCMFjR1zRQgSqYXGLukTMFvvvQ/iYV4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Choose Type"
+        title="Choose Type"
+        src="/frompat/static/f4bbf4a91dfd32259354924d386445ac/f058b/choose-type.png"
+        srcset="/frompat/static/f4bbf4a91dfd32259354924d386445ac/c26ae/choose-type.png 158w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/6bdcf/choose-type.png 315w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/f058b/choose-type.png 630w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/40601/choose-type.png 945w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/78612/choose-type.png 1260w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/05d4a/choose-type.png 1861w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>I’ve chose the type hobbyist for the bot.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/d975bac83b7ceb071c7213984a175756/91bda/making-a-bot.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABJ0AAASdAHeZh94AAABT0lEQVQoz3WRz0oDMRDG+wLFi4e2Yv1D/1GrbEtp1aq9iKBgj9ZjfSYPvowHX0E8iXgQFRW3grrNZiaTrN+uIlprGIaQye/7JpNUptxqdPeKXiedLfX6g+if5ZwzRoiYkZnF2ten59TiSqe5tTtbaaZzpf0/MDP7/jBZL2DGqqmF5bWCtzFXbU/P18ZguAFQShERsiaC4c8qnNdrq9teZye/1O4dHuHUugi9hZqscwjNfPfwGKjQOZQgZ+KmXeKcr7aK9c1Ks5st1r9hYglDwhWx7n2kLq+u34IRkFgrefYXnCl4iFypMTVTRts4xGAwETKWjGgWRQzbESAjoJDjjRER+xs+GLBISIwINAfs7gNRbElDBIxBQOPzAmIyjOGImAhOsYcZ+j4YFYajIICt0hPh/gCNoWYNn97okwt9fK7PbilyosnEP2ziTaKObD4APfKkeCzn5G4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Making a bot"
+        title="Making a bot"
+        src="/frompat/static/d975bac83b7ceb071c7213984a175756/f058b/making-a-bot.png"
+        srcset="/frompat/static/d975bac83b7ceb071c7213984a175756/c26ae/making-a-bot.png 158w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/6bdcf/making-a-bot.png 315w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/f058b/making-a-bot.png 630w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/40601/making-a-bot.png 945w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/78612/making-a-bot.png 1260w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/91bda/making-a-bot.png 1867w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h5>Getting started</h5>
+<p>Submit a standard application for access to the Twitter developer plataform</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/ad280793ab94202b37f24ef23849623d/e0202/standard-app.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABJ0AAASdAHeZh94AAABWUlEQVQoz4VSW07DMBDMrTkGN+ITiS8OAALSUKqSNmkTP/bhB+OEQlUgWCNrbc/srne3Sj9WBGJkEWJsSqzekyd2nojFWpdzbl9e98+PFdghJtEAhBADdDGQ6K7rN9vWs7BqyjlEIIXyXLznaVXgzfCiI6llbY1YEngKKUFMiI5EFBwptHJT+Cxa4TDDkHhNEnM9BCtBmI0xiAQwM1zxpPwCfH2LEc1LMI4Q1Uk49P172+IrQNd13nnW4BbEhhRFQeYAE3mPa6QnpW6qtBAZXkcv+PbgkYKSxoJTRUA9V16KC+Z+iDTrt2ZVr5u6bprRekts0a1l8WBdP5jDYPb9cL/qbp92m244GoPL42gd82JkJE/lhwfH13e7q5vtw97HoKWW/G/aZ0hRc0J7xP1BKOL4OY/pwtCYFAP321M62dVkFROjh5bOgz2NYZwmd94TKSi5DIwCxQY+AJZJ9He65Y23AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Standard App"
+        title="Standard App"
+        src="/frompat/static/ad280793ab94202b37f24ef23849623d/f058b/standard-app.png"
+        srcset="/frompat/static/ad280793ab94202b37f24ef23849623d/c26ae/standard-app.png 158w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/6bdcf/standard-app.png 315w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/f058b/standard-app.png 630w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/40601/standard-app.png 945w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/78612/standard-app.png 1260w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/e0202/standard-app.png 1395w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h5>Describe your app</h5>
+<p>Describe how you will use Twitter data and/or APIs. For example, you can say:
+<strong><em>“I will dedicate this bot to test the auto replying to tag and comments, auto retweet and like status with the name of Pelé.”</em></strong> or whatever you like to use.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/520251e8f905beeb0c8611ae127bf4a9/663b1/how-will-use.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 67.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABJ0AAASdAHeZh94AAABBklEQVQoz61SXW/DIAzk///EvUyallYtqdYmWQCDzc44WZNqXw87ncDBHL4YHIuAhRkk5tdbGsbp+UrdWM5jnOc4xxRikqqQKqBJQFd/A5eSiGICEwgNDtLBxKXw6Qx4EEHXHU4tPhyP3nvVs0oM23Od5bzv+8ulNOSct8EPplSM84ZpGqf3EOGOlGnxSZQxYr151hTs7sQAEkGFaBlvTRq2319Utm7DJWXM9x2y97m06kFc/4x/EEujQ/z4i9/D2nGv3K68PRyb17bsRHVdwL1KnUleBn56YyfrW7OefTbPWmylMFLBQrVgTHJN3Ad2vIKyAnvz8jq4xSrGiGpFKlKROOTF+wfsJgCPh3cscAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Describe your App"
+        title="Describe your App"
+        src="/frompat/static/520251e8f905beeb0c8611ae127bf4a9/f058b/how-will-use.png"
+        srcset="/frompat/static/520251e8f905beeb0c8611ae127bf4a9/c26ae/how-will-use.png 158w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/6bdcf/how-will-use.png 315w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/f058b/how-will-use.png 630w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/40601/how-will-use.png 945w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/78612/how-will-use.png 1260w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/663b1/how-will-use.png 1313w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h5>Submit your application</h5>
+<p>Accept the terms and submit your application.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/fe8a7/accept-terms.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAABJ0AAASdAHeZh94AAABoUlEQVQoz5VTyW7cMAz1//9B0VO/JMceem3QdEbe5ZE9djKjfbdK2ROkTZAgfaBp2uTTowSqWJ8R17SmbBCkLbDWOR+1Nkpp54OQaveQHe4P5+NDkXm5OGEeLkzM3GBqJaOT8ONVnbk5PHkXcslNI97E4EcRN6HL06XvcZ+BMR72Nzxt203zY9hqfAaEmb9bsQsvy4IQapq6rmogNU3Ttk3d1Iffh6osgbOTY4zpL7yQy7IETlVV4FGJ6g3DMIzjuNe8S2aMT9M0zzOsct4xg80ajkubGD8mUwo9E0JOIyEjgYVyfBoG3D8uy7vKiwoj1VwoKgTjnDLOuGAA8FIz5ZgJVBqujLF2Tf+gYNofOoK6U9l0qG7Byp4gfC7xWA3zEc+on1BH2tN45eI1GTqhlDEhpDZCaQHeBmlDjqUSEgA5yaVU5o1y+k/A9uNmMDjF+jw6L9hmc32L9Ep4O+1PwsVV+/V4Dd+J/zF58J9qe1c0ITG73g3+y0/77Zf9em8LH4J13lgXYgw5dvkqxRU+XQggCLPJTTQ+QR4qPez1dpXSH7LMYU9N+dndAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Accept terms"
+        title="Submit your application"
+        src="/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/f058b/accept-terms.png"
+        srcset="/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/c26ae/accept-terms.png 158w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/6bdcf/accept-terms.png 315w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/f058b/accept-terms.png 630w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/40601/accept-terms.png 945w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/fe8a7/accept-terms.png 1223w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h5>Verify your email</h5>
+<p>You need to verify your email and confirm to complete your application, after that your application will be reviewed. You will have to wait until there.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/697f279379b521d7099d4be113520a04/c6e28/app-received.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAABJ0AAASdAHeZh94AAABJUlEQVQoz41RbW6CQBDlEFYWUReE5WP53LIrCqWVNDEkJu0Beozeo2fwh2lo0iYescPSH1RNNHnZzM682fdmVjGSioonZDNkp/+RqIsYgolzP/U5dgVK+evH+2f7sz987Q9t+31UgHEnSUNo0ONynFQakRkrUSXGAyZclZ560jzCgeqKsHmDd0dGdGbqD8qpJmEAVm7zeifq3fr5hT1swfn1ZnAyp0szzE0/tcOMRJxXDX9sSFrOfAHVK8q9uJWURpBjyjEVZrSeEHaTbdgNmPRF7aSF4TE7XnrZBjLnspeVAbqbgaDHN4u4mHr8poX1/wEBfIlqxTKIukwPSUADC4rucnCle92JwxUsDGY2wtXM74Ju4K4qNFogwuY014ISORmSW/gFLZ9hi2E8QLAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="app-received"
+        title="Application Received"
+        src="/frompat/static/697f279379b521d7099d4be113520a04/f058b/app-received.png"
+        srcset="/frompat/static/697f279379b521d7099d4be113520a04/c26ae/app-received.png 158w,
+/frompat/static/697f279379b521d7099d4be113520a04/6bdcf/app-received.png 315w,
+/frompat/static/697f279379b521d7099d4be113520a04/f058b/app-received.png 630w,
+/frompat/static/697f279379b521d7099d4be113520a04/40601/app-received.png 945w,
+/frompat/static/697f279379b521d7099d4be113520a04/78612/app-received.png 1260w,
+/frompat/static/697f279379b521d7099d4be113520a04/c6e28/app-received.png 1777w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>When your application is approved you will be provided with a set of credentials that you will use to authenticate all requests to the API. Those are:</p>
+<ul>
+<li><strong>API Key</strong> - This is essentially a username, and allows you to make a request on behalf of your App.</li>
+<li><strong>API Key Secret</strong> - This is a password, and allows you to make a request on behalf of your App.</li>
+<li><strong>Access Token</strong> - This token represents the Twitter account that owns the App, and allows you to make a request on behalf of that Twitter account. </li>
+<li><strong>Access Token Secret</strong> - This token also represents the Twitter account that owns the App, and allows you to make a request on behalf of that Twitter account. </li>
+<li><strong>Bearer Token</strong> - This token represents your App and enables you to authenticate requests that require <a href="https://developer.twitter.com/en/docs/authentication/oauth-2-0">OAuth 2.0 Bearer Token</a> authentication. </li>
+</ul>
+<p>We are not going to use the Bearer Token on this tutorial.</p>
+<p>With Twitter API we will have access to a lot of endpoints and public user’s information such as:  </p>
+<p><strong>Tweets, Retweets, Likes, Trends, Media</strong>. As we will also have the right to tweet, retweet, like, send direct messages.</p>
+<h3>Rate Limit</h3>
+<p>Twitter API limits the number of requests a developer can make during a period, so you will have to take this in consideration when writing your bot. If you pass this limit your Twitter bot will be blocked during a time or even stopped to run.</p>
+<p>For example, Twitter API allows you to make <strong>2400 tweet updates</strong> by day in intervals of 30 minutes in your application (<strong>Retweets are also counted as tweets</strong>). Also <strong>1000 messages of direct message</strong>. Follow limit of <strong>400 follows</strong> by day and etc.  </p>
+<p>You can check all the types of Rate Limit here: <a href="https://developer.twitter.com/en/docs/rate-limits">Twitter API rate limit</a>.</p>
+<h2>Tweepy</h2>
+<p>We are going to use the Python library Tweepy to automatize our twitter bot. </p>
+<blockquote>
+<p>The API class provides access to the entire twitter RESTful API methods. Each method can accept various parameters and return responses. For more information about these methods please refer to API Reference.</p>
+</blockquote>
+<h3>Installation</h3>
+<p>You can install Tweepy through the following command:</p>
+<p><code class="language-text">pip install tweepy</code></p>
+<p>Particularly I use virtual environment to install my python libraries and packages not globally, if you don’t know how to use it go back to the beginning of the last article here: <a href="https://patriciadourado.com/frompat/jwt-login-flask/">JWT Login Flask</a>.</p>
+<h2>dotenv</h2>
+<p>To not expose our credentials when eventually pushing to a public repository I recommend the use of the module <a href="https://www.npmjs.com/package/dotenv">dotenv</a> and our sensitive data in a .env file like:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">CONSUMER_KEY = &#39;YOUR API KEY&#39;
+CONSUMER_SECRET = &#39;YOUR SECRET KEY&#39;
+KEY = &#39;YOUR ACCESS TOKEN&#39;
+SECRET = &#39;YOUR SECRET&#39;</code></pre></div>
+<blockquote>
+<p>Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.</p>
+</blockquote>
+<h3>Installation</h3>
+<p>You can install dotenv through pip with the following command:</p>
+<p><code class="language-text">pip install python-dotenv</code></p>
+<h3>First Tweet!</h3>
+<ul>
+<li><strong>Import libraries and load env variables</strong> - First of all we are going to import all the necessary libraries we will use:</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> tweepy
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> logging
+<span class="token keyword">from</span> dotenv <span class="token keyword">import</span> load_dotenv</code></pre></div>
+<ul>
+<li><strong>Load env variables</strong> - Then we will load the environment variables from .env file and set the python variables:
+load_dotenv()  # take environment variables from .env:</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token comment"># API key</span>
+CONSUMER_KEY <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'CONSUMER_KEY'</span><span class="token punctuation">)</span>
+<span class="token comment"># API secret key</span>
+CONSUMER_SECRET <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'CONSUMER_SECRET'</span><span class="token punctuation">)</span>
+<span class="token comment"># Access token</span>
+KEY <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'KEY'</span><span class="token punctuation">)</span>
+<span class="token comment"># Access token secret</span>
+SECRET <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'SECRET'</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li><strong>Link credentials to Login</strong> - Log with the credentials from our Twitter Application with the OAuth. Twitter requires all requests to use OAuth for authentication:</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>level<span class="token operator">=</span>logging<span class="token punctuation">.</span>INFO<span class="token punctuation">)</span>
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token punctuation">)</span>
+auth <span class="token operator">=</span> tweepy<span class="token punctuation">.</span>OAuthHandler<span class="token punctuation">(</span>CONSUMER_KEY<span class="token punctuation">,</span> CONSUMER_SECRET<span class="token punctuation">)</span>
+auth<span class="token punctuation">.</span>set_access_token<span class="token punctuation">(</span>KEY<span class="token punctuation">,</span> SECRET<span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li><strong>Create object API</strong> - We will create a Tweepy API. The API class provides access to the entire twitter RESTful API methods. Each method can accept various parameters and return responses:</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">api <span class="token operator">=</span> tweepy<span class="token punctuation">.</span>API<span class="token punctuation">(</span>auth<span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li><strong>Update status</strong> - We are going to update our status and tweet our first tweet from the bot!</li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">api<span class="token punctuation">.</span>update_status<span class="token punctuation">(</span><span class="token string">'bot tweeting live!'</span><span class="token punctuation">)</span></code></pre></div>
+<h3>Twitter bot is live!</h3>
+<p>Run the code below to tweet our first tweet with bot!</p>
+<h5><strong><code class="language-text">bot.py</code></strong></h5>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> tweepy
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> logging
+<span class="token keyword">from</span> dotenv <span class="token keyword">import</span> load_dotenv
+
+load_dotenv<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># take environment variables from .env.</span>
+
+<span class="token comment"># API key</span>
+CONSUMER_KEY <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'CONSUMER_KEY'</span><span class="token punctuation">)</span>
+<span class="token comment"># API secret key</span>
+CONSUMER_SECRET <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'CONSUMER_SECRET'</span><span class="token punctuation">)</span>
+<span class="token comment"># Access token</span>
+KEY <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'KEY'</span><span class="token punctuation">)</span>
+<span class="token comment"># Access token secret</span>
+SECRET <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">'SECRET'</span><span class="token punctuation">)</span>
+
+logging<span class="token punctuation">.</span>basicConfig<span class="token punctuation">(</span>level<span class="token operator">=</span>logging<span class="token punctuation">.</span>INFO<span class="token punctuation">)</span>
+logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+auth <span class="token operator">=</span> tweepy<span class="token punctuation">.</span>OAuthHandler<span class="token punctuation">(</span>CONSUMER_KEY<span class="token punctuation">,</span> CONSUMER_SECRET<span class="token punctuation">)</span>
+auth<span class="token punctuation">.</span>set_access_token<span class="token punctuation">(</span>KEY<span class="token punctuation">,</span> SECRET<span class="token punctuation">)</span>
+
+<span class="token comment"># Create API object</span>
+api <span class="token operator">=</span> tweepy<span class="token punctuation">.</span>API<span class="token punctuation">(</span>auth<span class="token punctuation">)</span>
+
+<span class="token comment"># First tweet from your bot account!</span>
+api<span class="token punctuation">.</span>update_status<span class="token punctuation">(</span><span class="token string">'bot tweeting live!'</span><span class="token punctuation">)</span></code></pre></div>
+<h3>Avoid repeated Tweets</h3>
+<p>To avoid reply or read the same tweets twice or more we are going to use a file with the ID of the last seen tweets:</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python">FILE_NAME <span class="token operator">=</span> <span class="token string">'last_seen.txt'</span>
+
+<span class="token keyword">def</span> <span class="token function">read_last_seen</span><span class="token punctuation">(</span>FILE_NAME<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  file_read <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>FILE_NAME<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+  last_seen_id <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>file_read<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  file_read<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> last_seen_id
+
+<span class="token keyword">def</span> <span class="token function">store_last_seen</span><span class="token punctuation">(</span>FILE_NAME<span class="token punctuation">,</span> last_seen_id<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  file_write <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>FILE_NAME<span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span>
+  file_write<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>last_seen_id<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  file_write<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span></code></pre></div>
+<h3>Replying Tweets</h3>
+<p>We are going to use the method <code class="language-text">api.update_status</code> again, but now for replying to users with the most recents tweets with the word ‘Brazil’ with the message: <em>“In brazilian portuguese we don’t say foreign we say GRINGO and I think that is beautiful!”</em></p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reply</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  tweets <span class="token operator">=</span> api<span class="token punctuation">.</span>mentions_timeline<span class="token punctuation">(</span>read_last_seen<span class="token punctuation">(</span>FILE_NAME<span class="token punctuation">)</span><span class="token punctuation">,</span> tweet_mode <span class="token operator">=</span> <span class="token string">'extended'</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">for</span> tweet <span class="token keyword">in</span> <span class="token builtin">reversed</span><span class="token punctuation">(</span>tweets<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token string">'brazil'</span> <span class="token keyword">in</span> tweet<span class="token punctuation">.</span>full_text<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+      api<span class="token punctuation">.</span>update_status<span class="token punctuation">(</span><span class="token string">"@"</span> <span class="token operator">+</span> tweet<span class="token punctuation">.</span>user<span class="token punctuation">.</span>screen_name <span class="token operator">+</span> <span class="token string">" In brazilian portuguese we don't say foreign we say GRINGO and I think that is beautiful!"</span><span class="token punctuation">,</span> tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+      store_last_seen<span class="token punctuation">(</span>FILE_NAME<span class="token punctuation">,</span> tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">)</span></code></pre></div>
+<p>To invoke the method just add the following line: <code class="language-text">reply()</code> on your python bot.py</p>
+<h3>Retweeting Tweets</h3>
+<p>This time we are going to retweet the first 25 tweets mentioning the word <em>brazilian</em>. Note that I used a <code class="language-text">time.sleep()</code> of 900 seconds to run the method <code class="language-text">api.retweet()</code> because of the rate limit imposed by Twitter API. </p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">retweet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> tweet <span class="token keyword">in</span> api<span class="token punctuation">.</span>search<span class="token punctuation">(</span>q<span class="token operator">=</span><span class="token string">"brazilian"</span><span class="token punctuation">,</span> lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token punctuation">,</span> count<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    status <span class="token operator">=</span> api<span class="token punctuation">.</span>get_status<span class="token punctuation">(</span>tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">,</span> tweet_mode <span class="token operator">=</span> <span class="token string">'extended'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> status<span class="token punctuation">.</span>retweeted<span class="token punctuation">:</span>  <span class="token comment"># Check if Retweet</span>
+      <span class="token keyword">try</span><span class="token punctuation">:</span>
+        api<span class="token punctuation">.</span>retweet<span class="token punctuation">(</span>tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+      <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"Error on retweet"</span><span class="token punctuation">,</span> exc_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+  retweet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">900</span><span class="token punctuation">)</span></code></pre></div>
+<p>A retweet is considered a POST request, that way in 900 seconds (15 minutes) we will retweet 25 tweets, so in one hour (3600 seconds) we will have retweeted 3600/900 = 4 x 25 tweets = 100 tweets.</p>
+<p>Please, observe the rate limit window, per user and app for POST requests:</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/b7936/rate-limit.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 60.75949367088608%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAABJ0AAASdAHeZh94AAABeklEQVQoz4WS3Y6lIBCEff933JnJ7MXmqKj8N43ifGByrjaZDkKBVFdBM/35+Pj+/kv/+fVVVFtr13WdJ+2stZ7/jXpeV7vvezoOa4yZl2VZ133Etu3e+1KKSE4pisjAklLK0iOnTNZOZp+zrgi/C39zLiEm6zx9jBlttoYQwSLKHu8jv0iDu2k7wsscqZyxYAjLDaFlMTuWrGOFwWwbMzKHkNbVsOJ9YOe0pzp7fTn5Z8UmrVohH9Ypzq6GMh6kKJgWEz6E89Z+Kdd0JF18MUFN1KxdvGhFtjAMPp5zlnF3VxpHAOi4s2mPZXblZQXxKBBqlmK2HYXSfZwc/42xzRTQ5yg7qVtS9NfYxTkFGZzzOpJfraGGi47ajQXuDsC0K9+/RSfd7Y3H9H5Wptc8U2Euk3PSBti3Xu/jabHXl4KnMWaKRqnRV1XqHCiJd46+U63tXw/3DDG+iT3GM+nPBguTc4709NY5aA//CeAx7Gw8up2+O4OuIyD/AP3vtQeBc6+1AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Rate Limit"
+        title="Rate Limit POST Request"
+        src="/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/f058b/rate-limit.png"
+        srcset="/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/c26ae/rate-limit.png 158w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/6bdcf/rate-limit.png 315w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/f058b/rate-limit.png 630w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/40601/rate-limit.png 945w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/b7936/rate-limit.png 1155w"
+        sizes="(max-width: 630px) 100vw, 630px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>With this logic we will have exactly 300 retweets in 3 hours.</p>
+<h3>Liking Tweets</h3>
+<p>To favorite/like the tweets we can use the method <code class="language-text">api.create_favorite()</code> like the following:</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">favorite</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> tweet <span class="token keyword">in</span> api<span class="token punctuation">.</span>search<span class="token punctuation">(</span>q<span class="token operator">=</span><span class="token string">"brazilian"</span><span class="token punctuation">,</span> lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token punctuation">,</span> count<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    status <span class="token operator">=</span> api<span class="token punctuation">.</span>get_status<span class="token punctuation">(</span>tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">,</span> tweet_mode <span class="token operator">=</span> <span class="token string">'extended'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> status<span class="token punctuation">.</span>retweeted<span class="token punctuation">:</span>  <span class="token comment"># Check if Retweet</span>
+      <span class="token keyword">try</span><span class="token punctuation">:</span>
+        api<span class="token punctuation">.</span>create_favorite<span class="token punctuation">(</span>tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+      <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"Error on retweet"</span><span class="token punctuation">,</span> exc_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+  favorite<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">900</span><span class="token punctuation">)</span></code></pre></div>
+<h3>Replying and Retweeting Tweets</h3>
+<p>If we would like to reply and retweet the same tweet we need to pay attention to not have our bot blocked by spamming, it means if we tweet the same thing in a short period the twitter is going to consider it as a spam. </p>
+<p>To get around this we will add an incremental value of i to differentiate the current reply from the previous one.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">retweet</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> tweet <span class="token keyword">in</span> api<span class="token punctuation">.</span>search<span class="token punctuation">(</span>q<span class="token operator">=</span><span class="token string">"brazilian"</span><span class="token punctuation">,</span> lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token punctuation">,</span> count<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    status <span class="token operator">=</span> api<span class="token punctuation">.</span>get_status<span class="token punctuation">(</span>tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">,</span> tweet_mode <span class="token operator">=</span> <span class="token string">'extended'</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> status<span class="token punctuation">.</span>retweeted<span class="token punctuation">:</span>  <span class="token comment"># Check if Retweet</span>
+      <span class="token keyword">try</span><span class="token punctuation">:</span>
+        i <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+        api<span class="token punctuation">.</span>update_status<span class="token punctuation">(</span><span class="token string">"@"</span> <span class="token operator">+</span> tweet<span class="token punctuation">.</span>user<span class="token punctuation">.</span>screen_name <span class="token operator">+</span> <span class="token string">" In brazilian portuguese we don't say foreign we say GRINGO and I think that is beautiful! +"</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+        api<span class="token punctuation">.</span>retweet<span class="token punctuation">(</span>tweet<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+      <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        logger<span class="token punctuation">.</span>error<span class="token punctuation">(</span><span class="token string">"Error on retweet"</span><span class="token punctuation">,</span> exc_info<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+  retweet<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">900</span><span class="token punctuation">)</span></code></pre></div>
+<p>Note that the number of tweets searched to be replied and retweeted changed to 12 due to the rate limit. If you prefer you can reduce the number of tweets that will be replied and retweeted or increase the time in <code class="language-text">time.sleep()</code> for call the method;</p>
+<h2>Thank you!</h2>
+<p>Hope you enjoyed this article and can build your own Twitter bot! :)</p></section><hr/><footer><div class="bio"><div class="bio-avatar gatsby-image-wrapper" style="position:relative;overflow:hidden;display:inline-block;width:50px;height:50px"><img aria-hidden="true" src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAQBAgMF/8QAGAEAAgMAAAAAAAAAAAAAAAAAAgMBBAX/2gAMAwEAAhADEAAAAZtre0WZ2Cyt4ig8oaQf/8QAGxAAAgIDAQAAAAAAAAAAAAAAAQIDEQASEwT/2gAIAQEAAQUCa7S2OxTJ4h086aicDrIbGxXGYs3/xAAZEQACAwEAAAAAAAAAAAAAAAAAMQIQEUH/2gAIAQMBAT8B3oyKr//EABoRAAICAwAAAAAAAAAAAAAAAAABAhIDMUH/2gAIAQIBAT8BeRVKxOi0f//EABwQAQEAAQUBAAAAAAAAAAAAAAABEQIhIjFRYf/aAAgBAQAGPwJhjV2+VfV5I2W1/8QAHRABAAICAgMAAAAAAAAAAAAAAQARITFRsUFhcf/aAAgBAQABPyFW25gCPMLhYe4Auu2HYPudMMzLkjm8JuCWf//aAAwDAQACAAMAAAAQAzB9/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARUf/aAAgBAwEBPxDQcwA2F2//xAAYEQEBAQEBAAAAAAAAAAAAAAABABEhsf/aAAgBAgEBPxAIA7DGvjMBi//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQVFxkdH/2gAIAQEAAT8QEGxl7m3HSJZEz2nIMVwHxAwb+dEcjRQsFrGo1YYb3G7y7KJhqUMZTWp//9k=" alt="Patricia Dourado" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms;border-radius:50%"/><noscript><picture><source srcset="/frompat/static/441215f37837e458511bdd5d0492c312/340ed/profile-pic.jpg 1x,
+/frompat/static/441215f37837e458511bdd5d0492c312/32ce1/profile-pic.jpg 1.5x,
+/frompat/static/441215f37837e458511bdd5d0492c312/04d41/profile-pic.jpg 2x" /><img loading="lazy" width="50" height="50" srcset="/frompat/static/441215f37837e458511bdd5d0492c312/340ed/profile-pic.jpg 1x,
+/frompat/static/441215f37837e458511bdd5d0492c312/32ce1/profile-pic.jpg 1.5x,
+/frompat/static/441215f37837e458511bdd5d0492c312/04d41/profile-pic.jpg 2x" src="/frompat/static/441215f37837e458511bdd5d0492c312/340ed/profile-pic.jpg" alt="Patricia Dourado" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div><p>Written by <strong>Patricia Dourado</strong> <!-- -->who is always looking for happiness, love and peace.<!-- --> <a href="https://twitter.com/static_pat">Follow me the good ones on Twitter</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/frompat/jwt-login-flask/">← <!-- -->JWT Login Flask</a></li><li></li></ul></nav></main><footer>© <!-- -->2021<!-- -->, Built by<!-- --> <a href="https://patriciadourado.com">Patricia Dourado</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/developing-a-twitter-bot-with-python/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f33cc994945b2249d5ee.js"],"app":["/app-14fe37a2a3c558faab89.js"],"component---src-pages-404-js":["/component---src-pages-404-js-3e55058c1b64c812dd89.js"],"component---src-pages-index-js":["/component---src-pages-index-js-90953d21b34f2fcdb79f.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-26054bc729026dd5d4b4.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-885b4c403245d58aef51.js"]};/*]]>*/</script><script src="/frompat/polyfill-f33cc994945b2249d5ee.js" nomodule=""></script><script src="/frompat/component---src-templates-blog-post-js-885b4c403245d58aef51.js" async=""></script><script src="/frompat/cd7d5f864fc9e15ed8adef086269b0aeff617554-b16e6efee4a992b32cbb.js" async=""></script><script src="/frompat/commons-907cc91e96bd82e1e73d.js" async=""></script><script src="/frompat/app-14fe37a2a3c558faab89.js" async=""></script><script src="/frompat/532a2f07-8d0154c2cf59560b38a4.js" async=""></script><script src="/frompat/framework-de237a875aa45b276a9d.js" async=""></script><script src="/frompat/styles-55e82d6ff5158c00b714.js" async=""></script><script src="/frompat/webpack-runtime-82787fe3a9aeb5a59041.js" async=""></script></body></html>

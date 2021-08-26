@@ -1,4 +1,586 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/blog</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 06 Jun 2021 03:44:56 GMT</lastBuildDate><item><title><![CDATA[JWT Login Flask]]></title><description><![CDATA[This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework Flask…]]></description><link>https://patriciadourado.com/blog/jwt-login-flask/</link><guid isPermaLink="false">https://patriciadourado.com/blog/jwt-login-flask/</guid><pubDate>Sat, 29 May 2021 22:01:45 GMT</pubDate><content:encoded>&lt;p&gt;This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework &lt;strong&gt;Flask&lt;/strong&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/blog</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 26 Aug 2021 19:56:19 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/blog/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/blog/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
+&lt;h2&gt;Twitter&lt;/h2&gt;
+&lt;p&gt;Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/a7a19/twitter-fail-whale.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.35443037974683%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsSAAALEgHS3X78AAACoUlEQVQoz2WR6U8TQRiH+3f6TSUExAomYkwMn8REQwyXQIvFGNvCUqBLjxCRtN3ubi8rFBVoUWjpXrM72z26ZSldejitRiBOfpnjfeeZ9xibR1Lm+KoDVN8wtQnWmOR0hyA5WPC/FhjhppwssAUqKi4afmCsAcPD65igujnRw/AeVvjI8G5GcKNNmXMzvJcTVwQJE6RVAH0AfuBF2yetysiwXDqtyFIVipBndQlUKkpFlkWWkYGgyVARgSZJjXq90+m0222r2URrXNFtK5KiX10hq1qvB0rFQPF0lRPow73I0f5mqRgunvjL5Q2O3yyXQ2clf/E0C6VOb5AIdgKoWBY6nBnGfTJ+LxYdX3v/etnxZAsfwz1juLePiE65px9v4Xdp6k5kZ+7g4BpGNVd7kdlabSSZsCcTL7c3R9Oph7nvs0HPRAibCXgnQ9goRQynkgMUuVQoXMN++S/M1GqPErQ9QQ9lMn3xWD9FjnwOPyd2Rqn4IuYcTGeGE3Q/GXfl89ewV5L/pI3g4WTiAU09Tac2SsUIxzoKx/Z0+lkm9SK0OrU8P0DTfXHiFuyTFc26+gejt7/0WtJst7s3BGG9VKJ5boqOjedyqBzn0dGNhvGi0uhFNgyU9iBFhstndctqtlqdVsuwGvOHB0lRLJrmLpRQ5os3YRcH1B7MmiaChyhykCRe7ed8v44TgC+olSTPTv/4ZqfiqB3oL5byt2F42Wh1Orqh7eKL2fWFr763qQ1HEpvJ4s49vyOPL+wHXVnfLPJmsOmf6e1Gt6I2oWg2FwtOzAvYsKSLumbWNPMcSTfPFaMKdRXqhqgZaO7Zu17lwhQuG6jSbVm1vWMBWmKKFlW0iKJ3pVYjqr4lwDAvhLlKkFXDnNqzdxXt3tEIVcMA/A2U7bMCeH85UgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Twitter fail whale&quot;
+        title=&quot;Twitter Whale&quot;
+        src=&quot;/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/f058b/twitter-fail-whale.png&quot;
+        srcset=&quot;/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/c26ae/twitter-fail-whale.png 158w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/6bdcf/twitter-fail-whale.png 315w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/f058b/twitter-fail-whale.png 630w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/40601/twitter-fail-whale.png 945w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/78612/twitter-fail-whale.png 1260w,
+/frompat/static/65c5eec04154b9770aa3b7d15aa56b8a/a7a19/twitter-fail-whale.png 1323w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Twitter is used today for many things, from voting for awards, promoting protests, drawing the world’s attention to some catastrophic situation, sharing memes, FAKE NEWS, revealing talent and even reporting crimes in inaccessible or unsafe places, contributing a lot to journalistic work and of the police.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/2a333/trump-tweet.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.06329113924051%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAPoAAAD6AG1e1JrAAABSUlEQVQoz42RuU7DQBCG/bKUiAYKChp6JBBItIiKjtcgMspFdh1fEbYDKYiddXzs6TUTx0AUgsInFzPj+T3zjw0ueDyfE0KEFPUXWuvvuPoD6DFMs3NxdnJzfmqaZhRFjuOEYZgkyWQymYaB9ZZmvIKvrXo3ALGUyuibncujg6vjw6c+cj3vudsb224YTceOizCOPpZc6Vpv04il4b0GD7fXj/d370uuKyWUElJSyuA1BG3jrp1Xa2/Y+/G5aV7/ukJbBzHYQyNk2/ZgMHAdF1sYnEOKMR4OX4IwQAh1e73RCLmuZ9sOtM1ms/UhDcZYHMdRQ1EUZVlSSiHIGzjnWZbN4xjqRQMUoaGdDInv+zDKsizKaP0/WrFUKi9KISQTgjIGoyGFR1WV3ocBiyULsszzBUmzvCBpCkFCiFJqv3h9xq1j1rt/0DafsdpwrYcaOfkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;wtf is Covfefe&quot;
+        title=&quot;wtf is Covfefe&quot;
+        src=&quot;/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/f058b/trump-tweet.png&quot;
+        srcset=&quot;/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/c26ae/trump-tweet.png 158w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/6bdcf/trump-tweet.png 315w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/f058b/trump-tweet.png 630w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/40601/trump-tweet.png 945w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/78612/trump-tweet.png 1260w,
+/frompat/static/563c547c407a79f5fe33b9fe4c4a5042/2a333/trump-tweet.png 1484w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As it is a place full of users of different ages, but predominantly young, large companies use twitter for advertising, sales and, of course, answering possible complaints about their products in an automated and ‘modern’ way, full of memes of the moment.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAACYUlEQVQozw2RWU8TYRSG5/d443IjRUG21rK0033aaWcGOi3TdtqhHSoULYVKVSC4YjSKYgxaFPcYE40RYgyI0f/0+F2d5D15kuecVxq46EX3nWLLUfjRKXLTitJKDhIdOMmgHKWqyzx0s7yZM7mqTrBheBnqOYHXP0TWf4ZuXeNb22LVlLmsDCDFEzJ2wkdDDfLCVWlngqxpo9jjHgaDUZZtjc9XLL4v2fxZddm2ExjhYTQ1RDE2QksPsVNTWVIDrApO8geDtAtJ9tsV9moGP5dtPs/qGP2n6Qsk6TTrfF+p8Lvt8O9Ok6d1k/iEl0gszFo5zYHgdmd0jjoOXVtB6h0NU86E2cwr7FWmeFvLsZWLYfp66RkVJ+c1FrNRXpXS7M3naaYDyCN9DAQiuFqIRwWRVyZ57+a4Nykj9YzFKEymuGMl+GBneCZsF1U/0WEPF0Iq2YzCohZgU+w3rTjl8CDjw+eEfYIZM8V9kX8U3GMxLyk+pIBRolYw2J03+XWjRrdhcdtJERnrxa9OM1Mw2XEzHK7NsetOsT7lF4YeItkyDXuSdws5Dq5V6S4UuF6MIQW1InUrw8eWzf5yhaP1eXbmslQyAXwJk9liVpxqcrAyw2GnypNCmHzch6xZtGydL0tlwZUF1+CR6EA6L6s4VYdPq3WOlkr8vdXgnmNQFK35lCy2U2WvZXEsnv/3bpONfBw90M9QTGeu7vBVcL9FkceC6+STSGcnkmTSCUqhfp5X0rwUdq46Ti5+Ec+EQlKJUZL7eDCd4EUjz4IRQpeHOSdEjFQEJ3yB18Js2zVwkuP8B1riloY+8VdwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Narazé Tedesco&quot;
+        title=&quot;Narazé Tedesco&quot;
+        src=&quot;/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png&quot;
+        srcset=&quot;/frompat/static/0873a7ad99860135440d5d08368648a2/c26ae/nazare-tedesco.png 158w,
+/frompat/static/0873a7ad99860135440d5d08368648a2/6bdcf/nazare-tedesco.png 315w,
+/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png 600w&quot;
+        sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Badly programmed bot&lt;/h3&gt;
+&lt;p&gt;The growing use of bots is notable from well-programmed ones to big flops. As in the case of the Brazilian company Decolar, which responded to the user by referring to him/her through his ‘nickname’, which was a loophole for people to put insults in his name and make the company’s official profile tweet the insult when responding, the user changed its nickname and printed the company tweet like: “wow free insults”;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 595px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/1bf8ab5669d166348152e5b0db919da6/3dd3e/decolar-bot.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.53164556962025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABJ0AAASdAHeZh94AAABj0lEQVQoz4WQz3LTMBDGZTdObMtSmbSJRVL/lxTLxk7iiYOTAQ658iS8Rs+99Dl4DM48Bg/AgTN8aRlmWgaq8eysvPrtft+S2/ffPvqfuX/drpuqqo0xp9OJc07+eyzLsm2bfP/6827/Q1jvVJUqVWZZnqSZ4zjkpQOefKq/fBjf27bDOPcDBO6Oxy9y58jnxBl5E9+hjDLG3cn4wuPkMrQuhf0QLZf9HvI3fBURz/c8nwYB9yidAKZTwsT586bk1Q1x+T8nT5cEG1osFofDoes6qaSWsmubutR9t1m+Fm/7XV3XSunRaPQcvo6JlEUcx1JKtMjzXK9Wq9KEociLIhQiTTNUZ7NZEASU0j/0ObgBWa/Xbdtut1vGmDFV0zSbzQZylFLDMOz3+7p+UxQFkr7vn/vHI9TAI4miWOuVEGGWZUmSPMpBFU2ThzOfh0/4sjRVVZnK4KnWZ9VJkiLBFYKFEGCURmcFObDzBMbMYTgslzdlWUZRBG3H4xFedrsdLMAOfmJnyAGjitXC/2OLX0zvO1yRo798AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Decolar Bot&quot;
+        title=&quot;Decolar Bot&quot;
+        src=&quot;/frompat/static/1bf8ab5669d166348152e5b0db919da6/3dd3e/decolar-bot.png&quot;
+        srcset=&quot;/frompat/static/1bf8ab5669d166348152e5b0db919da6/c26ae/decolar-bot.png 158w,
+/frompat/static/1bf8ab5669d166348152e5b0db919da6/6bdcf/decolar-bot.png 315w,
+/frompat/static/1bf8ab5669d166348152e5b0db919da6/3dd3e/decolar-bot.png 595w&quot;
+        sizes=&quot;(max-width: 595px) 100vw, 595px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Translated tweet: &lt;em&gt;“Ok, selena gomez is not an artist.. Our team is working to offer your all the possible alternatives.”&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Something very important for the visibility of your brand, profile, account is engagement and to have it you must keep your account always active. You can do this manually or rest with the use of a Twitter bot.&lt;/p&gt;
+&lt;h2&gt;Twitter API&lt;/h2&gt;
+&lt;p&gt;With this API you are able to retrieve, analyze data, write tweets programmatically.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The Twitter API provides the tools you need to contribute to, engage with, and analyze the conversation happening on Twitter.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To start our bot, first of all you need to create (if you don’t have one) a twitter account and then you must apply for a developer account to have your user case approved. &lt;/p&gt;
+&lt;p&gt;After that you have to create a Twitter Application through &lt;a href=&quot;https://apps.twitter.com/app/new&quot;&gt;Twitter API for developers website&lt;/a&gt;. &lt;/p&gt;
+&lt;h5&gt;Create an App&lt;/h5&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/fb1ef/twitter-developer.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABJ0AAASdAHeZh94AAAA4klEQVQoz82QwWrCQBCG9020JojQdzK66KFe9RYQBM3Jg/gGJUIhkt36EqJtiA/hI8hGY7Iznd3G9ij11Nmfn2+Gfw6zrOsK7kqvFntP4uU56rdk15W8+d6ux+26IPeMG1Gg4wjuiEFT8kbcc19Z6O9D/yMcJyv/czPfyvkhmqbrWRrNjBsFh3VAnkakSbIc7ft8uxju3sYJQ8QSQEGO9wqsnxGPiFfLTBdQ5IU6qUydL/QyK1XBJavgmhe6BApDCQjGiRn+veAGjyzjP1im439uAKi6X7BsJ6htTtNn6e8wfgFQOt88MgLXRwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Twitter Developer&quot;
+        title=&quot;Twitter Developer&quot;
+        src=&quot;/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/f058b/twitter-developer.png&quot;
+        srcset=&quot;/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/c26ae/twitter-developer.png 158w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/6bdcf/twitter-developer.png 315w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/f058b/twitter-developer.png 630w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/40601/twitter-developer.png 945w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/78612/twitter-developer.png 1260w,
+/frompat/static/8f4c0ec2a25bfc66498c2288450d01eb/fb1ef/twitter-developer.png 1879w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;Choose type of app&lt;/h5&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/f4bbf4a91dfd32259354924d386445ac/05d4a/choose-type.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.10126582278481%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAABJ0AAASdAHeZh94AAABMUlEQVQoz8VSS0vDQBDeH1D14EHTHApqH1hKbbXUiohSvHjutUf9rSKeFLxVRS2CCU2bNNnsa9YvjWA9CN78GOa5387ssKxzerHV6BWc8mB4ZX+HMSSElFJlohTMx+iRNQ77brVdcCrfZMqQ2yCYer7veV4YRovcD7By67hU766X6oPh5XIBTKV0nPA0FZynScLRkywtH2CV9slu56xYaeedNVHMxdv4nQtliIy1wTScBDNDmNwi6fsTaG2yW1i9228enbu1g5yMZDCbX9/chvMEbPQaPb08v46VsQijOL27f5hF8YJrmVNuudX9Nbf21dkQF3qepKnU8KVGqCBSG60J08Rc5qWMvLHdBH9leWF/Btvc2cODV4vV/yZrwBh8A0juQCMFjR1zRQgSqYXGLukTMFvvvQ/iYV4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Choose Type&quot;
+        title=&quot;Choose Type&quot;
+        src=&quot;/frompat/static/f4bbf4a91dfd32259354924d386445ac/f058b/choose-type.png&quot;
+        srcset=&quot;/frompat/static/f4bbf4a91dfd32259354924d386445ac/c26ae/choose-type.png 158w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/6bdcf/choose-type.png 315w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/f058b/choose-type.png 630w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/40601/choose-type.png 945w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/78612/choose-type.png 1260w,
+/frompat/static/f4bbf4a91dfd32259354924d386445ac/05d4a/choose-type.png 1861w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I’ve chose the type hobbyist for the bot.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/d975bac83b7ceb071c7213984a175756/91bda/making-a-bot.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAABJ0AAASdAHeZh94AAABT0lEQVQoz3WRz0oDMRDG+wLFi4e2Yv1D/1GrbEtp1aq9iKBgj9ZjfSYPvowHX0E8iXgQFRW3grrNZiaTrN+uIlprGIaQye/7JpNUptxqdPeKXiedLfX6g+if5ZwzRoiYkZnF2ten59TiSqe5tTtbaaZzpf0/MDP7/jBZL2DGqqmF5bWCtzFXbU/P18ZguAFQShERsiaC4c8qnNdrq9teZye/1O4dHuHUugi9hZqscwjNfPfwGKjQOZQgZ+KmXeKcr7aK9c1Ks5st1r9hYglDwhWx7n2kLq+u34IRkFgrefYXnCl4iFypMTVTRts4xGAwETKWjGgWRQzbESAjoJDjjRER+xs+GLBISIwINAfs7gNRbElDBIxBQOPzAmIyjOGImAhOsYcZ+j4YFYajIICt0hPh/gCNoWYNn97okwt9fK7PbilyosnEP2ziTaKObD4APfKkeCzn5G4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Making a bot&quot;
+        title=&quot;Making a bot&quot;
+        src=&quot;/frompat/static/d975bac83b7ceb071c7213984a175756/f058b/making-a-bot.png&quot;
+        srcset=&quot;/frompat/static/d975bac83b7ceb071c7213984a175756/c26ae/making-a-bot.png 158w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/6bdcf/making-a-bot.png 315w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/f058b/making-a-bot.png 630w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/40601/making-a-bot.png 945w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/78612/making-a-bot.png 1260w,
+/frompat/static/d975bac83b7ceb071c7213984a175756/91bda/making-a-bot.png 1867w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;Getting started&lt;/h5&gt;
+&lt;p&gt;Submit a standard application for access to the Twitter developer plataform&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/ad280793ab94202b37f24ef23849623d/e0202/standard-app.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.65822784810127%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABJ0AAASdAHeZh94AAABWUlEQVQoz4VSW07DMBDMrTkGN+ITiS8OAALSUKqSNmkTP/bhB+OEQlUgWCNrbc/srne3Sj9WBGJkEWJsSqzekyd2nojFWpdzbl9e98+PFdghJtEAhBADdDGQ6K7rN9vWs7BqyjlEIIXyXLznaVXgzfCiI6llbY1YEngKKUFMiI5EFBwptHJT+Cxa4TDDkHhNEnM9BCtBmI0xiAQwM1zxpPwCfH2LEc1LMI4Q1Uk49P172+IrQNd13nnW4BbEhhRFQeYAE3mPa6QnpW6qtBAZXkcv+PbgkYKSxoJTRUA9V16KC+Z+iDTrt2ZVr5u6bprRekts0a1l8WBdP5jDYPb9cL/qbp92m244GoPL42gd82JkJE/lhwfH13e7q5vtw97HoKWW/G/aZ0hRc0J7xP1BKOL4OY/pwtCYFAP321M62dVkFROjh5bOgz2NYZwmd94TKSi5DIwCxQY+AJZJ9He65Y23AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Standard App&quot;
+        title=&quot;Standard App&quot;
+        src=&quot;/frompat/static/ad280793ab94202b37f24ef23849623d/f058b/standard-app.png&quot;
+        srcset=&quot;/frompat/static/ad280793ab94202b37f24ef23849623d/c26ae/standard-app.png 158w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/6bdcf/standard-app.png 315w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/f058b/standard-app.png 630w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/40601/standard-app.png 945w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/78612/standard-app.png 1260w,
+/frompat/static/ad280793ab94202b37f24ef23849623d/e0202/standard-app.png 1395w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;Describe your app&lt;/h5&gt;
+&lt;p&gt;Describe how you will use Twitter data and/or APIs. For example, you can say:
+&lt;strong&gt;&lt;em&gt;“I will dedicate this bot to test the auto replying to tag and comments, auto retweet and like status with the name of Pelé.”&lt;/em&gt;&lt;/strong&gt; or whatever you like to use.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/520251e8f905beeb0c8611ae127bf4a9/663b1/how-will-use.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.08860759493672%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAABJ0AAASdAHeZh94AAABBklEQVQoz61SXW/DIAzk///EvUyallYtqdYmWQCDzc44WZNqXw87ncDBHL4YHIuAhRkk5tdbGsbp+UrdWM5jnOc4xxRikqqQKqBJQFd/A5eSiGICEwgNDtLBxKXw6Qx4EEHXHU4tPhyP3nvVs0oM23Od5bzv+8ulNOSct8EPplSM84ZpGqf3EOGOlGnxSZQxYr151hTs7sQAEkGFaBlvTRq2319Utm7DJWXM9x2y97m06kFc/4x/EEujQ/z4i9/D2nGv3K68PRyb17bsRHVdwL1KnUleBn56YyfrW7OefTbPWmylMFLBQrVgTHJN3Ad2vIKyAnvz8jq4xSrGiGpFKlKROOTF+wfsJgCPh3cscAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Describe your App&quot;
+        title=&quot;Describe your App&quot;
+        src=&quot;/frompat/static/520251e8f905beeb0c8611ae127bf4a9/f058b/how-will-use.png&quot;
+        srcset=&quot;/frompat/static/520251e8f905beeb0c8611ae127bf4a9/c26ae/how-will-use.png 158w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/6bdcf/how-will-use.png 315w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/f058b/how-will-use.png 630w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/40601/how-will-use.png 945w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/78612/how-will-use.png 1260w,
+/frompat/static/520251e8f905beeb0c8611ae127bf4a9/663b1/how-will-use.png 1313w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;Submit your application&lt;/h5&gt;
+&lt;p&gt;Accept the terms and submit your application.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/fe8a7/accept-terms.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.78481012658227%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAABJ0AAASdAHeZh94AAABoUlEQVQoz5VTyW7cMAz1//9B0VO/JMceem3QdEbe5ZE9djKjfbdK2ROkTZAgfaBp2uTTowSqWJ8R17SmbBCkLbDWOR+1Nkpp54OQaveQHe4P5+NDkXm5OGEeLkzM3GBqJaOT8ONVnbk5PHkXcslNI97E4EcRN6HL06XvcZ+BMR72Nzxt203zY9hqfAaEmb9bsQsvy4IQapq6rmogNU3Ttk3d1Iffh6osgbOTY4zpL7yQy7IETlVV4FGJ6g3DMIzjuNe8S2aMT9M0zzOsct4xg80ajkubGD8mUwo9E0JOIyEjgYVyfBoG3D8uy7vKiwoj1VwoKgTjnDLOuGAA8FIz5ZgJVBqujLF2Tf+gYNofOoK6U9l0qG7Byp4gfC7xWA3zEc+on1BH2tN45eI1GTqhlDEhpDZCaQHeBmlDjqUSEgA5yaVU5o1y+k/A9uNmMDjF+jw6L9hmc32L9Ep4O+1PwsVV+/V4Dd+J/zF58J9qe1c0ITG73g3+y0/77Zf9em8LH4J13lgXYgw5dvkqxRU+XQggCLPJTTQ+QR4qPez1dpXSH7LMYU9N+dndAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Accept terms&quot;
+        title=&quot;Submit your application&quot;
+        src=&quot;/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/f058b/accept-terms.png&quot;
+        srcset=&quot;/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/c26ae/accept-terms.png 158w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/6bdcf/accept-terms.png 315w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/f058b/accept-terms.png 630w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/40601/accept-terms.png 945w,
+/frompat/static/51d1a7aeabc5ccc986c635c033fe113a/fe8a7/accept-terms.png 1223w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h5&gt;Verify your email&lt;/h5&gt;
+&lt;p&gt;You need to verify your email and confirm to complete your application, after that your application will be reviewed. You will have to wait until there.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/697f279379b521d7099d4be113520a04/c6e28/app-received.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAABJ0AAASdAHeZh94AAABJUlEQVQoz41RbW6CQBDlEFYWUReE5WP53LIrCqWVNDEkJu0Beozeo2fwh2lo0iYescPSH1RNNHnZzM682fdmVjGSioonZDNkp/+RqIsYgolzP/U5dgVK+evH+2f7sz987Q9t+31UgHEnSUNo0ONynFQakRkrUSXGAyZclZ560jzCgeqKsHmDd0dGdGbqD8qpJmEAVm7zeifq3fr5hT1swfn1ZnAyp0szzE0/tcOMRJxXDX9sSFrOfAHVK8q9uJWURpBjyjEVZrSeEHaTbdgNmPRF7aSF4TE7XnrZBjLnspeVAbqbgaDHN4u4mHr8poX1/wEBfIlqxTKIukwPSUADC4rucnCle92JwxUsDGY2wtXM74Ju4K4qNFogwuY014ISORmSW/gFLZ9hi2E8QLAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;app-received&quot;
+        title=&quot;Application Received&quot;
+        src=&quot;/frompat/static/697f279379b521d7099d4be113520a04/f058b/app-received.png&quot;
+        srcset=&quot;/frompat/static/697f279379b521d7099d4be113520a04/c26ae/app-received.png 158w,
+/frompat/static/697f279379b521d7099d4be113520a04/6bdcf/app-received.png 315w,
+/frompat/static/697f279379b521d7099d4be113520a04/f058b/app-received.png 630w,
+/frompat/static/697f279379b521d7099d4be113520a04/40601/app-received.png 945w,
+/frompat/static/697f279379b521d7099d4be113520a04/78612/app-received.png 1260w,
+/frompat/static/697f279379b521d7099d4be113520a04/c6e28/app-received.png 1777w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;When your application is approved you will be provided with a set of credentials that you will use to authenticate all requests to the API. Those are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;API Key&lt;/strong&gt; - This is essentially a username, and allows you to make a request on behalf of your App.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API Key Secret&lt;/strong&gt; - This is a password, and allows you to make a request on behalf of your App.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt; - This token represents the Twitter account that owns the App, and allows you to make a request on behalf of that Twitter account. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Token Secret&lt;/strong&gt; - This token also represents the Twitter account that owns the App, and allows you to make a request on behalf of that Twitter account. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bearer Token&lt;/strong&gt; - This token represents your App and enables you to authenticate requests that require &lt;a href=&quot;https://developer.twitter.com/en/docs/authentication/oauth-2-0&quot;&gt;OAuth 2.0 Bearer Token&lt;/a&gt; authentication. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We are not going to use the Bearer Token on this tutorial.&lt;/p&gt;
+&lt;p&gt;With Twitter API we will have access to a lot of endpoints and public user’s information such as:  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tweets, Retweets, Likes, Trends, Media&lt;/strong&gt;. As we will also have the right to tweet, retweet, like, send direct messages.&lt;/p&gt;
+&lt;h3&gt;Rate Limit&lt;/h3&gt;
+&lt;p&gt;Twitter API limits the number of requests a developer can make during a period, so you will have to take this in consideration when writing your bot. If you pass this limit your Twitter bot will be blocked during a time or even stopped to run.&lt;/p&gt;
+&lt;p&gt;For example, Twitter API allows you to make &lt;strong&gt;2400 tweet updates&lt;/strong&gt; by day in intervals of 30 minutes in your application (&lt;strong&gt;Retweets are also counted as tweets&lt;/strong&gt;). Also &lt;strong&gt;1000 messages of direct message&lt;/strong&gt;. Follow limit of &lt;strong&gt;400 follows&lt;/strong&gt; by day and etc.  &lt;/p&gt;
+&lt;p&gt;You can check all the types of Rate Limit here: &lt;a href=&quot;https://developer.twitter.com/en/docs/rate-limits&quot;&gt;Twitter API rate limit&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Tweepy&lt;/h2&gt;
+&lt;p&gt;We are going to use the Python library Tweepy to automatize our twitter bot. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The API class provides access to the entire twitter RESTful API methods. Each method can accept various parameters and return responses. For more information about these methods please refer to API Reference.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;You can install Tweepy through the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pip install tweepy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Particularly I use virtual environment to install my python libraries and packages not globally, if you don’t know how to use it go back to the beginning of the last article here: &lt;a href=&quot;https://patriciadourado.com/frompat/jwt-login-flask/&quot;&gt;JWT Login Flask&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;dotenv&lt;/h2&gt;
+&lt;p&gt;To not expose our credentials when eventually pushing to a public repository I recommend the use of the module &lt;a href=&quot;https://www.npmjs.com/package/dotenv&quot;&gt;dotenv&lt;/a&gt; and our sensitive data in a .env file like:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;CONSUMER_KEY = &amp;#39;YOUR API KEY&amp;#39;
+CONSUMER_SECRET = &amp;#39;YOUR SECRET KEY&amp;#39;
+KEY = &amp;#39;YOUR ACCESS TOKEN&amp;#39;
+SECRET = &amp;#39;YOUR SECRET&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;You can install dotenv through pip with the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pip install python-dotenv&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;First Tweet!&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Import libraries and load env variables&lt;/strong&gt; - First of all we are going to import all the necessary libraries we will use:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; tweepy
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; time
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; logging
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; dotenv &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dotenv&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Load env variables&lt;/strong&gt; - Then we will load the environment variables from .env file and set the python variables:
+load_dotenv()  # take environment variables from .env:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# API key&lt;/span&gt;
+CONSUMER_KEY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;CONSUMER_KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# API secret key&lt;/span&gt;
+CONSUMER_SECRET &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;CONSUMER_SECRET&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Access token&lt;/span&gt;
+KEY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Access token secret&lt;/span&gt;
+SECRET &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;SECRET&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Link credentials to Login&lt;/strong&gt; - Log with the credentials from our Twitter Application with the OAuth. Twitter requires all requests to use OAuth for authentication:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;basicConfig&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;level&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;INFO&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+logger &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getLogger&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+auth &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tweepy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;OAuthHandler&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;CONSUMER_KEY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; CONSUMER_SECRET&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;set_access_token&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KEY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; SECRET&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create object API&lt;/strong&gt; - We will create a Tweepy API. The API class provides access to the entire twitter RESTful API methods. Each method can accept various parameters and return responses:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;api &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tweepy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;API&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Update status&lt;/strong&gt; - We are going to update our status and tweet our first tweet from the bot!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;update_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;bot tweeting live!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Twitter bot is live!&lt;/h3&gt;
+&lt;p&gt;Run the code below to tweet our first tweet with bot!&lt;/p&gt;
+&lt;h5&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;bot.py&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; os
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; tweepy
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; time
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; logging
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; dotenv &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; load_dotenv
+
+load_dotenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# take environment variables from .env.&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# API key&lt;/span&gt;
+CONSUMER_KEY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;CONSUMER_KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# API secret key&lt;/span&gt;
+CONSUMER_SECRET &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;CONSUMER_SECRET&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Access token&lt;/span&gt;
+KEY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;KEY&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Access token secret&lt;/span&gt;
+SECRET &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getenv&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;SECRET&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;basicConfig&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;level&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;INFO&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+logger &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; logging&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getLogger&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+auth &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tweepy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;OAuthHandler&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;CONSUMER_KEY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; CONSUMER_SECRET&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+auth&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;set_access_token&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KEY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; SECRET&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Create API object&lt;/span&gt;
+api &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tweepy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;API&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;auth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# First tweet from your bot account!&lt;/span&gt;
+api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;update_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;bot tweeting live!&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Avoid repeated Tweets&lt;/h3&gt;
+&lt;p&gt;To avoid reply or read the same tweets twice or more we are going to use a file with the ID of the last seen tweets:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;FILE_NAME &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;last_seen.txt&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;read_last_seen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;FILE_NAME&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  file_read &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;FILE_NAME&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;r&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  last_seen_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;file_read&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;read&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;strip&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  file_read&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;close&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; last_seen_id
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;store_last_seen&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;FILE_NAME&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; last_seen_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  file_write &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;FILE_NAME&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;w&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  file_write&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;write&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;last_seen_id&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  file_write&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;close&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Replying Tweets&lt;/h3&gt;
+&lt;p&gt;We are going to use the method &lt;code class=&quot;language-text&quot;&gt;api.update_status&lt;/code&gt; again, but now for replying to users with the most recents tweets with the word ‘Brazil’ with the message: &lt;em&gt;“In brazilian portuguese we don’t say foreign we say GRINGO and I think that is beautiful!”&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  tweets &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mentions_timeline&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;read_last_seen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;FILE_NAME&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet_mode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;extended&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; tweet &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweets&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;brazil&apos;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;full_text&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lower&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;update_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;@&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;screen_name &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; In brazilian portuguese we don&apos;t say foreign we say GRINGO and I think that is beautiful!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      store_last_seen&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;FILE_NAME&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To invoke the method just add the following line: &lt;code class=&quot;language-text&quot;&gt;reply()&lt;/code&gt; on your python bot.py&lt;/p&gt;
+&lt;h3&gt;Retweeting Tweets&lt;/h3&gt;
+&lt;p&gt;This time we are going to retweet the first 25 tweets mentioning the word &lt;em&gt;brazilian&lt;/em&gt;. Note that I used a &lt;code class=&quot;language-text&quot;&gt;time.sleep()&lt;/code&gt; of 900 seconds to run the method &lt;code class=&quot;language-text&quot;&gt;api.retweet()&lt;/code&gt; because of the rate limit imposed by Twitter API. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;retweet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; tweet &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;q&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;brazilian&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; lang&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; count&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    status &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet_mode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;extended&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; status&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;retweeted&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Check if Retweet&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;retweet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;except&lt;/span&gt; Exception &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        logger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Error on retweet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; exc_info&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  retweet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A retweet is considered a POST request, that way in 900 seconds (15 minutes) we will retweet 25 tweets, so in one hour (3600 seconds) we will have retweeted 3600/900 = 4 x 25 tweets = 100 tweets.&lt;/p&gt;
+&lt;p&gt;Please, observe the rate limit window, per user and app for POST requests:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/b7936/rate-limit.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 60.75949367088608%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAABJ0AAASdAHeZh94AAABeklEQVQoz4WS3Y6lIBCEff933JnJ7MXmqKj8N43ifGByrjaZDkKBVFdBM/35+Pj+/kv/+fVVVFtr13WdJ+2stZ7/jXpeV7vvezoOa4yZl2VZ133Etu3e+1KKSE4pisjAklLK0iOnTNZOZp+zrgi/C39zLiEm6zx9jBlttoYQwSLKHu8jv0iDu2k7wsscqZyxYAjLDaFlMTuWrGOFwWwbMzKHkNbVsOJ9YOe0pzp7fTn5Z8UmrVohH9Ypzq6GMh6kKJgWEz6E89Z+Kdd0JF18MUFN1KxdvGhFtjAMPp5zlnF3VxpHAOi4s2mPZXblZQXxKBBqlmK2HYXSfZwc/42xzRTQ5yg7qVtS9NfYxTkFGZzzOpJfraGGi47ajQXuDsC0K9+/RSfd7Y3H9H5Wptc8U2Euk3PSBti3Xu/jabHXl4KnMWaKRqnRV1XqHCiJd46+U63tXw/3DDG+iT3GM+nPBguTc4709NY5aA//CeAx7Gw8up2+O4OuIyD/AP3vtQeBc6+1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Rate Limit&quot;
+        title=&quot;Rate Limit POST Request&quot;
+        src=&quot;/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/f058b/rate-limit.png&quot;
+        srcset=&quot;/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/c26ae/rate-limit.png 158w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/6bdcf/rate-limit.png 315w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/f058b/rate-limit.png 630w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/40601/rate-limit.png 945w,
+/frompat/static/62b80757e646e44920ec25ea2fb6e9d1/b7936/rate-limit.png 1155w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;With this logic we will have exactly 300 retweets in 3 hours.&lt;/p&gt;
+&lt;h3&gt;Liking Tweets&lt;/h3&gt;
+&lt;p&gt;To favorite/like the tweets we can use the method &lt;code class=&quot;language-text&quot;&gt;api.create_favorite()&lt;/code&gt; like the following:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;favorite&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; tweet &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;q&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;brazilian&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; lang&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; count&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    status &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet_mode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;extended&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; status&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;retweeted&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Check if Retweet&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;create_favorite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;except&lt;/span&gt; Exception &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        logger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Error on retweet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; exc_info&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  favorite&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Replying and Retweeting Tweets&lt;/h3&gt;
+&lt;p&gt;If we would like to reply and retweet the same tweet we need to pay attention to not have our bot blocked by spamming, it means if we tweet the same thing in a short period the twitter is going to consider it as a spam. &lt;/p&gt;
+&lt;p&gt;To get around this we will add an incremental value of i to differentiate the current reply from the previous one.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;retweet&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; tweet &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;q&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;brazilian&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; lang&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; count&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    status &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;get_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet_mode &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;extended&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; status&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;retweeted&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;# Check if Retweet&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+        api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;update_status&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;@&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;screen_name &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; In brazilian portuguese we don&apos;t say foreign we say GRINGO and I think that is beautiful! +&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        api&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;retweet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tweet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;except&lt;/span&gt; Exception &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        logger&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Error on retweet&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; exc_info&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  retweet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that the number of tweets searched to be replied and retweeted changed to 12 due to the rate limit. If you prefer you can reduce the number of tweets that will be replied and retweeted or increase the time in &lt;code class=&quot;language-text&quot;&gt;time.sleep()&lt;/code&gt; for call the method;&lt;/p&gt;
+&lt;h2&gt;Thank you!&lt;/h2&gt;
+&lt;p&gt;Hope you enjoyed this article and can build your own Twitter bot! :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JWT Login Flask]]></title><description><![CDATA[This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework Flask…]]></description><link>https://patriciadourado.com/blog/jwt-login-flask/</link><guid isPermaLink="false">https://patriciadourado.com/blog/jwt-login-flask/</guid><pubDate>Sat, 29 May 2021 22:01:45 GMT</pubDate><content:encoded>&lt;p&gt;This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework &lt;strong&gt;Flask&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Before running the Flask API its necessary to install a bunch of packages as you can check listed here &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask/blob/master/requirements.txt&quot;&gt;requirements.txt&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Python Virtual Environment&lt;/h2&gt;
 &lt;p&gt;To install the required modules I’ve used &lt;code class=&quot;language-text&quot;&gt;Python virtualenv&lt;/code&gt; to create a isolated Virtual Environment in Python so the project can have it’s own dependencies independently of other project’s dependencies. In resume: for not installing globally this modules. &lt;/p&gt;
