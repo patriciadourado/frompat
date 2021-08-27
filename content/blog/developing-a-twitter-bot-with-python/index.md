@@ -5,8 +5,6 @@ description: A Twitter bot developed in Python using Tweepy library to make
   requests to the Twitter API. This bot will make requests to POST and GET
   endpoints for tweet, reply, retweet, like and get tweets.
 ---
-# Developing a Twitter bot with Python
-
 In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.
 
 ## Twitter
