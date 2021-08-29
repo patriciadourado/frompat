@@ -4,7 +4,7 @@ module.exports = {
     title: `from Pat`,
     author: {
       name: `Patricia Dourado`,
-      summary: `who is always looking for happiness, love and peace.`,
+      summary: `Computer Engineer and a learning enthusiast.`,
     },
     description: `Computer engineer and a learning enthusiast. This is my first blog.`,
     siteUrl: `https://patriciadourado.com/blog/`,

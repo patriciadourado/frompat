@@ -4,18 +4,19 @@ date: 2021-01-13T11:27:08.574Z
 description: Netlify CMS is a single-page React application which acts as a
   wrapper for our Git Workflow to provide a simple and friendly User Interface
   (UI).
+featuredImage: './images/netlifycms.png'
 ---
 Since I started to think of writing some guides about everything I was learning and doing, I saw the need of starting my own blog to document my steps and help myself to remind things I've already done without losing too much time learning again from different sources. 
 
 So, after searching between [Hugo](https://gohugo.io/) and [Gatsby](https://www.gatsbyjs.com/) and once I was familiar with React and NPM, to make things easier I chose to use a Gatsby boilerplate blog ([gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)).
 
-![GatsbyVsHugo](gatsby-vs-hugo.png "Gatsby vs Hugo")
+![GatsbyVsHugo](/images/gatsby-vs-hugo.png "Gatsby vs Hugo")
 
 Writing my first post about styled-components on this blog directly in Markdown, made me want so hard an editor or something to manage the file posts without having to worry about .md syntax and etc. So I found [Netlify CMS](https://www.netlifycms.org/) with this incredibly support to Gatsby! 
 
 > Netlify CMS is an open-source content management system (CMS) for static site generators that allows to edit our content and data as commits in applications Git Repositories in Markdown, JSON, YAML or TOML format.
 
-![netlifycms](netlifycms.png "NetlifyCMS")
+![netlifycms](/images/netlifycms.png "NetlifyCMS")
 
 Following the guide on this [link](https://www.netlifycms.org/docs/gatsby/) that I will detail here too, it was so easy to setup everything and starting using the Netlify CMS as I'm doing right now.
 

@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Img from 'gatsby-image';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -52,6 +53,7 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
+                  <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
@@ -90,6 +92,13 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          featuredImage {
+            childImageSharp {
+              sizes(maxWidth: 630) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
       }
     }

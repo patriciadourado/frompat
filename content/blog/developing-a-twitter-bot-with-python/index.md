@@ -4,6 +4,7 @@ date: 2021-08-27T18:42:40.179Z
 description: A Twitter bot developed in Python using Tweepy library to make
   requests to the Twitter API. This bot will make requests to POST and GET
   endpoints for tweet, reply, retweet, like and get tweets.
+featuredImage: './images/nazare-tedesco.png'
 ---
 In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.
 
@@ -11,21 +12,21 @@ In this article we gonna build a twitter bot in Python with Tweepy, a very nice 
 
 Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.
 
-![Twitter fail whale](twitter-fail-whale.png "Twitter Whale")
+![Twitter fail whale](/images/twitter-fail-whale.png "Twitter Whale")
 
 Twitter is used today for many things, from voting for awards, promoting protests, drawing the world's attention to some catastrophic situation, sharing memes, FAKE NEWS, revealing talent and even reporting crimes in inaccessible or unsafe places, contributing a lot to journalistic work and of the police.
 
-![wtf is Covfefe](trump-tweet.png "wtf is Covfefe")
+![wtf is Covfefe](/images/trump-tweet.png "wtf is Covfefe")
 
 As it is a place full of users of different ages, but predominantly young, large companies use twitter for advertising, sales and, of course, answering possible complaints about their products in an automated and 'modern' way, full of memes of the moment.
 
-![Narazé Tedesco](nazare-tedesco.png "Narazé Tedesco")
+![Narazé Tedesco](/images/nazare-tedesco.png "Narazé Tedesco")
 
 ### Badly programmed bot
 
 The growing use of bots is notable from well-programmed ones to big flops. As in the case of the Brazilian company Decolar, which responded to the user by referring to him/her through his 'nickname', which was a loophole for people to put insults in his name and make the company's official profile tweet the insult when responding, the user changed its nickname and printed the company tweet like: "wow free insults";
 
-![Decolar Bot](decolar-bot.png "Decolar Bot")
+![Decolar Bot](/images/decolar-bot.png "Decolar Bot")
 
 Translated tweet: *"Ok, selena gomez is not an artist.. Our team is working to offer your all the possible alternatives."*
 
@@ -43,40 +44,40 @@ After that you have to create a Twitter Application through [Twitter API for dev
 
 ##### Create an App
 
-![Twitter Developer](twitter-developer.png "Twitter Developer")
+![Twitter Developer](/images/twitter-developer.png "Twitter Developer")
 
 ##### Choose type of app
 
-![Choose Type](choose-type.png "Choose Type")
+![Choose Type](/images/choose-type.png "Choose Type")
 
 I've chose the type hobbyist for the bot.
 
-![Making a bot](making-a-bot.png "Making a bot")
+![Making a bot](/images/making-a-bot.png "Making a bot")
 
 ##### Getting started
 
 Submit a standard application for access to the Twitter developer plataform
 
-![Standard App](standard-app.png "Standard App")
+![Standard App](/images/standard-app.png "Standard App")
 
 ##### Describe your app
 
 Describe how you will use Twitter data and/or APIs. For example, you can say: 
 ***"I will dedicate this bot to test the auto replying to tag and comments, auto retweet and like status with the name of Pelé."*** or whatever you like to use.
 
-![Describe your App](how-will-use.png "Describe your App")
+![Describe your App](/images/how-will-use.png "Describe your App")
 
 ##### Submit your application
 
 Accept the terms and submit your application.
 
-![Accept terms](accept-terms.png "Submit your application")
+![Accept terms](/images/accept-terms.png "Submit your application")
 
 ##### Verify your email
 
 You need to verify your email and confirm to complete your application, after that your application will be reviewed. You will have to wait until there.
 
-![app-received](app-received.png "Application Received")
+![app-received](/images/app-received.png "Application Received")
 
 When your application is approved you will be provided with a set of credentials that you will use to authenticate all requests to the API. Those are:
 
@@ -276,7 +277,7 @@ A retweet is considered a POST request, that way in 900 seconds (15 minutes) we 
 
 Please, observe the rate limit window, per user and app for POST requests:
 
-![Rate Limit](rate-limit.png "Rate Limit POST Request")
+![Rate Limit](/images/rate-limit.png "Rate Limit POST Request")
 
 With this logic we will have exactly 300 retweets in 3 hours.
 

@@ -4,6 +4,7 @@ date: 2021-05-29T22:01:45.059Z
 description: A Flask JWT based login authentication using flask-praetorian
   module to handle the hard part and SQLAlchemy as ORM with PostreSQL as
   database.
+featuredImage: './images/jwt-reactjs-flask.png'
 ---
 This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework **Flask**.
 
@@ -13,7 +14,7 @@ Before running the Flask API its necessary to install a bunch of packages as you
 
 To install the required modules I've used `Python virtualenv` to create a isolated Virtual Environment in Python so the project can have it's own dependencies independently of other project's dependencies. In resume: for not installing globally this modules. 
 
-![Python virtualenv](python-virtualenv-project-structure.jpg)
+![Python virtualenv](/images/python-virtualenv-project-structure.jpg)
 
 #### Installation
 
@@ -47,7 +48,7 @@ To deactivate **myproject** just run: `deactivate`.
 
 Its also necessary to create a database and **users** table before anything. I've used [PostegreSQL](https://www.postgresql.org/) as database and pgAdmin 4 interface to create the DB and table.
 
-![pgadmin4](pgadmin4.png)
+![pgadmin4](/images/pgadmin4.png)
 
 #### Create users table
 
@@ -256,7 +257,7 @@ To run your application locally you can use the following command:
 
 This application was deployed on **Heroku.**
 
-![heroku](heroku.png)
+![heroku](/images/heroku.png)
 
 The deployment is not described in this article. You can check the app up and running [here](https://jwtlogin-app.herokuapp.com/api/).
 
@@ -264,7 +265,7 @@ The deployment is not described in this article. You can check the app up and ru
 
 To let the things easier Flask-praetorian was used to handle the hard logic by itself. 
 
-![flask-praetorian](flask-praetorian.png)
+![flask-praetorian](/images/flask-praetorian.png)
 
 Among the advantages of using Flask-praetorian in this API (where the most important is undoubtedly allowing to use JWT token for authentication) are:
 

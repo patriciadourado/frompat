@@ -2,17 +2,18 @@
 title: Styled Components
 date: "2021-01-07T15:34:45.169Z"
 description: As my first post I decided to praise the use of styled-components library in ReactJS applications and show how your front end projects will become more organized and easy to develop with its use.
+featuredImage: './images/evolution.png'
 ---
 
 While the front end development is experiencing the modular advantages of components, there are several ways to styling them, as CSS, SASS, CSS Modules, etc. 
 
 I would like to introduce you to my new favorite one: [styled-components](https://styled-components.com/). 
 
-![Styled Components Logo ](./styled-component-logo.png)
+![Styled Components Logo ](/images/styled-component-logo.png)
 
 Created by [Max Stoiber](https://mxstbr.com), styled-components is a library that allows you to write CSS code inside Javascript, which means you won't need to import .css file into your page anymore. In addiction to organize your code better, you also have the possibility to reuse the created components in the same project just calling them or in another project just copying the .js file into it.
 
-![Evolution](./evolution.png)
+![Evolution](/images/evolution.png)
 
 I had my first experience with styled-components on a ReactJS project I started developing last year. I was presented to this fantastic library through a learning live on **twitch.tv** of an expert front end developer and once I used it I've never wanted to return to the old ways of styling. You will see why!
 
@@ -50,7 +51,7 @@ The following example creates a simple button component, already styled:
 ```
 *The result:*
 
-![Button](./button.png)
+![Button](/images/button.png)
 
 Now you saw how easy is to styling your component, you must know that **you can style any component!** 
 
@@ -76,7 +77,7 @@ render(
 );
 ```
 *The result:*
-![Title](./title.png)
+![Title](/images/title.png)
 
 You can also pass tag names into the styled() factory call, as "div", "section", not only components.
 
@@ -111,7 +112,7 @@ render(
 ```
 *Check the result below:*
 
-![Title](./tag.png)
+![Title](/images/tag.png)
 
 One of my favorites things in styled-components is how you can pass props of a component to the DOM node that is mounted.
 
@@ -136,7 +137,7 @@ render(
 ```
 *Check the result below:*
 
-![Props](./props.png)
+![Props](/images/props.png)
 
 >Apart from the improved experience for developers, styled-components provides:
 
