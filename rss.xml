@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 01 Sep 2021 06:27:38 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 02 Sep 2021 06:48:38 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
 &lt;h2&gt;Twitter&lt;/h2&gt;
 &lt;p&gt;Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -939,28 +939,28 @@ cors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;sp
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 381px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 568px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/frompat/static/b5d0f6b7b9597520eb59885cef5ebf2c/2add2/netlifycms.png&quot;
+    href=&quot;/frompat/static/e6374ec99433de68cf734ef12f64d219/10e91/netlifycms2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 34.810126582278485%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAABQElEQVQY02PQNzQCIkNjEw1tHRU1dQMjY4gIBAG5cIQsDkEMEJ1KKmrhkVFl5RUaWtpAdbr6BkBxIKmtq6ejp6+prQNk6+kbAZG+EVAcphmoVEtHNzg07OTJU0eOHE1MTgGqtrV3MLOwtLGzB4oHhYQkp6Q6u7qbWRmbW4P0WNoBXQTWrGdgCNS/aPGSrdu27d9/4MTJU77+Ac0trTNnzZo7b15v/4TO7u6evr7+/inV3cHZzXrlE8ya5pkC9evogW0GWuXl7QPUfOny5eqaWl0DQ09v75DQMD//QB9fP7+AQCcX17yCYg9/a1d/Q59wY48gYxNzkBcYIKGiqq6RkpZWWFSkpqEJdAvQq0B/Ar0DYejoGQDVaOsYamsbaWoZaWkb6RnAAgwSZpo6usAABzLQAhkoAmKABI0MjKEkRBcASpFxt38LZScAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 34.810126582278485%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABb0lEQVQoz1VRy0pCURS9fxJkvq73de5DB2UPKM1CLM0s1IQwCKGHFEIQJI5Le0CWsxxU4/wBBzoS85NWZ1+9YoN19j6Lvdc5ey9BZToUjYEZJnxiAB6fH5pugPhZOJymz/LsXw3pCHRQ8dy8C7n8Ea4rFSx4vHaBpKiQVQ0BWYE/INl3isRJMoOscBGVcZ5NBHUIJCZKMvKFAgaDAXr9PrK5vN28GF6GYQURXllFOnOAZGoPx8Uiv68htGRw8MlMncfx70hUoNcM08Ln1zd+Oh10u10Mh0Nb4K5axUe7jfdWCw+NBu7rdTw+PaP59opybROlmorbpoWbFxO6Nf6tQKo0UjQWQ6/Xw+9ohLPzC5jBENYjERxmc0il9xFP7CCxm+RcFJflK2zELcTSOrbSBrYzBvdgskNn4W6vj49zgtNSCS63Z7o7r1+0zaLdUZQUzW4MSAyiyOCfYDoyJY4x1ECYdZnyWThuqvrYcQcO/wfqOvyb1N+v9AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;netlifycms&quot;
         title=&quot;NetlifyCMS&quot;
-        src=&quot;/frompat/static/b5d0f6b7b9597520eb59885cef5ebf2c/2add2/netlifycms.png&quot;
-        srcset=&quot;/frompat/static/b5d0f6b7b9597520eb59885cef5ebf2c/c26ae/netlifycms.png 158w,
-/frompat/static/b5d0f6b7b9597520eb59885cef5ebf2c/6bdcf/netlifycms.png 315w,
-/frompat/static/b5d0f6b7b9597520eb59885cef5ebf2c/2add2/netlifycms.png 381w&quot;
-        sizes=&quot;(max-width: 381px) 100vw, 381px&quot;
+        src=&quot;/frompat/static/e6374ec99433de68cf734ef12f64d219/10e91/netlifycms2.png&quot;
+        srcset=&quot;/frompat/static/e6374ec99433de68cf734ef12f64d219/c26ae/netlifycms2.png 158w,
+/frompat/static/e6374ec99433de68cf734ef12f64d219/6bdcf/netlifycms2.png 315w,
+/frompat/static/e6374ec99433de68cf734ef12f64d219/10e91/netlifycms2.png 568w&quot;
+        sizes=&quot;(max-width: 568px) 100vw, 568px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
