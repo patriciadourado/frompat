@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Sep 2021 07:11:23 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 03 Sep 2021 21:56:30 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
 &lt;h2&gt;Twitter&lt;/h2&gt;
 &lt;p&gt;Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -69,28 +69,29 @@
 &lt;p&gt;As it is a place full of users of different ages, but predominantly young, large companies use twitter for advertising, sales and, of course, answering possible complaints about their products in an automated and ‘modern’ way, full of memes of the moment.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png&quot;
+    href=&quot;/frompat/static/4a7c5f071842b8c6a7cf4c628f99a7d2/eafa3/nazare-tedesco.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.202531645569614%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAACYUlEQVQozw2RWU8TYRSG5/d443IjRUG21rK0033aaWcGOi3TdtqhHSoULYVKVSC4YjSKYgxaFPcYE40RYgyI0f/0+F2d5D15kuecVxq46EX3nWLLUfjRKXLTitJKDhIdOMmgHKWqyzx0s7yZM7mqTrBheBnqOYHXP0TWf4ZuXeNb22LVlLmsDCDFEzJ2wkdDDfLCVWlngqxpo9jjHgaDUZZtjc9XLL4v2fxZddm2ExjhYTQ1RDE2QksPsVNTWVIDrApO8geDtAtJ9tsV9moGP5dtPs/qGP2n6Qsk6TTrfF+p8Lvt8O9Ok6d1k/iEl0gszFo5zYHgdmd0jjoOXVtB6h0NU86E2cwr7FWmeFvLsZWLYfp66RkVJ+c1FrNRXpXS7M3naaYDyCN9DAQiuFqIRwWRVyZ57+a4Nykj9YzFKEymuGMl+GBneCZsF1U/0WEPF0Iq2YzCohZgU+w3rTjl8CDjw+eEfYIZM8V9kX8U3GMxLyk+pIBRolYw2J03+XWjRrdhcdtJERnrxa9OM1Mw2XEzHK7NsetOsT7lF4YeItkyDXuSdws5Dq5V6S4UuF6MIQW1InUrw8eWzf5yhaP1eXbmslQyAXwJk9liVpxqcrAyw2GnypNCmHzch6xZtGydL0tlwZUF1+CR6EA6L6s4VYdPq3WOlkr8vdXgnmNQFK35lCy2U2WvZXEsnv/3bpONfBw90M9QTGeu7vBVcL9FkceC6+STSGcnkmTSCUqhfp5X0rwUdq46Ti5+Ec+EQlKJUZL7eDCd4EUjz4IRQpeHOSdEjFQEJ3yB18Js2zVwkuP8B1riloY+8VdwAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 65.82278481012659%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAwAB/9oADAMBAAIQAxAAAAFOwaFMv//EABsQAAIBBQAAAAAAAAAAAAAAAAECEQASITEy/9oACAEBAAEFAk5TbxcjUGgtk//EABURAQEAAAAAAAAAAAAAAAAAABBR/9oACAEDAQE/AYf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAACAwEAAAAAAAAAAAAAAAAAMQEQIUH/2gAIAQEABj8C6TghX//EABoQAAMAAwEAAAAAAAAAAAAAAAABESFBUTH/2gAIAQEAAT8hXiNwfcedDAmpx6XcUarh/9oADAMBAAIAAwAAABBMP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAITH/2gAIAQMBAT8QHI9v/8QAFxEAAwEAAAAAAAAAAAAAAAAAARARIf/aAAgBAgEBPxCaV//EABoQAQEAAwEBAAAAAAAAAAAAAAERACExQaH/2gAIAQEAAT8QDyKeBzAOg02y1CAcciMLtWU00n3CiC+Q1n//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Narazé Tedesco&quot;
         title=&quot;Narazé Tedesco&quot;
-        src=&quot;/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png&quot;
-        srcset=&quot;/frompat/static/0873a7ad99860135440d5d08368648a2/c26ae/nazare-tedesco.png 158w,
-/frompat/static/0873a7ad99860135440d5d08368648a2/6bdcf/nazare-tedesco.png 315w,
-/frompat/static/0873a7ad99860135440d5d08368648a2/0a47e/nazare-tedesco.png 600w&quot;
-        sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+        src=&quot;/frompat/static/4a7c5f071842b8c6a7cf4c628f99a7d2/828fb/nazare-tedesco.jpg&quot;
+        srcset=&quot;/frompat/static/4a7c5f071842b8c6a7cf4c628f99a7d2/ff44c/nazare-tedesco.jpg 158w,
+/frompat/static/4a7c5f071842b8c6a7cf4c628f99a7d2/a6688/nazare-tedesco.jpg 315w,
+/frompat/static/4a7c5f071842b8c6a7cf4c628f99a7d2/828fb/nazare-tedesco.jpg 630w,
+/frompat/static/4a7c5f071842b8c6a7cf4c628f99a7d2/eafa3/nazare-tedesco.jpg 702w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
