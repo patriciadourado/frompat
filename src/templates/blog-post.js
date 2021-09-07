@@ -9,7 +9,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-  const featuredImage = post.frontmatter.featuredImage
+  const featuredImage = post.frontmatter.featuredImage.childImageSharp.fluid.src;
+  console.log(featuredImage)
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -91,7 +92,7 @@ export const pageQuery = graphql`
             fixed(height: 600, width: 1200) {
               src
             }
-            fluid(maxWidth: 700, maxHeight: 500) {
+            fluid(maxWidth: 1300, maxHeight: 700) {
               ...GatsbyImageSharpFluid
             }
           }

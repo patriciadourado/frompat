@@ -41,7 +41,8 @@ const SEO = ({ description, lang, meta, title, image }) => {
   let ogImageUrl = image;
   
   if(title!=="All posts | frompat "){
-    const imageSrc = image && image?.childImageSharp?.fixed?.src;
+    // const imageSrc = image && image?.childImageSharp?.fixed?.src;
+    const imageSrc = image;
     
     let origin = "";
     if (typeof window !== "undefined") {
@@ -49,7 +50,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
     }
     ogImageUrl = origin + imageSrc;
   }
-  
+
   return (
     <Helmet
       htmlAttributes={{
@@ -70,12 +71,12 @@ const SEO = ({ description, lang, meta, title, image }) => {
         { property: `og:url`, content: `https://patriciadourado.com/frompat`, },
         { property: `og:image`, content: ogImageUrl, },
         { property: `og:image:type`,content: `image/png`, },
-        { name: `twitter:card`, content: `summary_large_image`, },
-        { name: `twitter:creator`, content: siteMetadata?.social?.twitter || ``, },
-        { name: `twitter:title`, content: title, },
-        { name: `twitter:image`, content: ogImageUrl, },
-        { name: `twitter:url`, content: `https://patriciadourado.com/frompat`, },
-        { name: `twitter:description`, content: metaDescription,},
+        { property: `twitter:card`, content: `summary_large_image`, },
+        { property: `twitter:creator`, content: siteMetadata?.social?.twitter || ``, },
+        { property: `twitter:title`, content: title, },
+        { property: `twitter:image`, content: ogImageUrl, },
+        { property: `twitter:url`, content: `https://patriciadourado.com/frompat`, },
+        { property: `twitter:description`, content: metaDescription,},
       ].concat(meta)}
     />
   )
