@@ -4,7 +4,7 @@ date: 2021-01-13T11:27:08.574Z
 description: Netlify CMS is a single-page React application which acts as a
   wrapper for our Git Workflow to provide a simple and friendly User Interface
   (UI).
-featuredImage: './images/netlifycms.png'
+featuredImage: './images/netlifycmsGatsby.png'
 ---
 Since I started to think of writing some guides about everything I was learning and doing, I saw the need of starting my own blog to document my steps and help myself to remind things I've already done without losing too much time learning again from different sources. 
 

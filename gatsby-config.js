@@ -7,7 +7,7 @@ module.exports = {
       summary: `Computer Engineer and a learning enthusiast.`,
     },
     description: `Computer engineer and a learning enthusiast. This is my first blog.`,
-    siteUrl: `https://patriciadourado.com/blog/`,
+    siteUrl: `https://patriciadourado.com/frompat`,
     social: {
       twitter: `static_pat`,
     },

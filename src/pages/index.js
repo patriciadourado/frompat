@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-
+  
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -53,7 +53,7 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
+                  <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} alt="frompat post"/>
                   <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
@@ -94,8 +94,8 @@ export const pageQuery = graphql`
           description
           featuredImage {
             childImageSharp {
-              sizes(maxWidth: 630) {
-                ...GatsbyImageSharpSizes
+              fluid {
+                ...GatsbyImageSharpFluid
               }
             }
           }

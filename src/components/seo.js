@@ -34,17 +34,22 @@ const SEO = ({ description, lang, meta, title, image }) => {
       }
     `
   )
-  // Be lenient with null values making sure we
-// return null if either argument is not provided
-  
-  const constructUrl = (baseUrl, path) => (!baseUrl || !path) ? null : `${baseUrl}${path}`;
   
   const { siteMetadata } = data.site;
   const metaDescription = description || siteMetadata.description;
   const defaultTitle = data.siteMetadata?.title;
-  const defaultImageUrl = constructUrl(siteMetadata.siteUrl, data.site.ogImageDefault?.childImageSharp?.fixed?.src)
-  const ogImageUrl = image || defaultImageUrl;
-
+  let ogImageUrl = image;
+  
+  if(title!=="All posts | frompat "){
+    const imageSrc = image && image?.childImageSharp?.fixed?.src;
+    
+    let origin = "";
+    if (typeof window !== "undefined") {
+      origin = window.location.origin;
+    }
+    ogImageUrl = origin + imageSrc;
+  }
+  
   return (
     <Helmet
       htmlAttributes={{
