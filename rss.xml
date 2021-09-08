@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Sep 2021 20:23:50 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. This is my first blog.]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 08 Sep 2021 20:41:57 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
 &lt;h2&gt;Twitter&lt;/h2&gt;
 &lt;p&gt;Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -1051,24 +1051,24 @@ Scroll down to &lt;strong&gt;Services &gt; Git Gateway&lt;/strong&gt;, and click
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/frompat/static/9f88225d2b155f757274961503b66ffb/8bd7c/evolution.png&quot;
+    href=&quot;/frompat/static/99912978437da509e4b469ecf6dc11b6/8bd7c/evolution.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABn0lEQVQoz32SO2/TUBiG+4eY+BkVAwsTAxIbE0wwdGHoAAgpC2yoEhISEkK0VQaohBAVvQAKBCLqJHaU2LHjOs2twT728bH9YAdRKDW80neu7/dI79FZIleWZSf15/5vJUlCJCVhnFcYnvL/0lIxpGlKFEWLKoxKKVTRLALmsyntpsbBpxpd08JotWns7tPudBb+fwKFEPi+IM5h/X6foe3wWbepGQPmhoZ+9TLB8ZTJXoPRqxqq6FOqHFhEWURQ35FJhP7kNbNvBne3R2ybAkyD3vlz+F8+Yj+uMn75CJmJvC8tcKeBxTrLUpQMWVu3eFf9Smf1KTPT4cYLi7c9H1n/gHVxGRGljKprhM2H+XNM8mScBf48TFmpuFy47jFoWOiVdfzhiDtbfd7bPqKl4Vy5hEhA6TeR3gYiT5smcXlkKRXXblvcqjjMOz2cZ28wDiye1z12mh5ia5PD+/cIurvE9gMiNwfK/wCnxxJNn7JfnzB3PAL3CLPr4s4CWuaQ4HCAr2mI9g4yGhOP9/JZkJZ9m7L/9ltn707sJbBCPwD5gKK7hJaxgAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 47.46835443037975%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABJ0AAASdAHeZh94AAABmElEQVQoz5WS30obURCHfbE+QfGiD1AoeGXve+ELFEqpIlYQvPFOaGnrhQEv/ItiwZJqtZFYs2Z302yiu9ndJO7Z7Nmz+Xo2tRqJLXRgzpxhZj5m4DeGtn6/z7/sf+pjf5I8KqUGnqoUlSqyLNN5lleJooiulISdDrZlYtkmRuWcIAhu53O/B4zjWA8KhNBRRLTCgE7oY5g29YbD4dtpqtubhBpufdzAbXoIPfNXoBA9kjhCkeBWalTXdvlcDVjYsgY9zYmnBAvTdIwm9dlFkl6LNM0eBmZZHiUXVov9ok1lfpVo+yuLBx6v1hugYswn4/gr7/C/m/gfpki6RWSiRoG/YXB02ubRs5+s73qcv35PfHzGctFlftMm38N5PkG7WKLnfyEtv0BIvYLsjQLVDXBm6ZLHkyZ21cX5tIOzd0Kh7LFaahF+O8Sbe0NQWCFtF5DGS8R1qIHq4ZMTmXF8GnBwEmKUHBJXQ89qWFchP66uqZfKJM0G3f01ZFRD+kf6ZFMrYoC7Aw7Tb1Q19N4K7e473NFXIzr8BSDapRHj4OhrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Evolution&quot;
         title=&quot;Evolution&quot;
-        src=&quot;/frompat/static/9f88225d2b155f757274961503b66ffb/f058b/evolution.png&quot;
-        srcset=&quot;/frompat/static/9f88225d2b155f757274961503b66ffb/c26ae/evolution.png 158w,
-/frompat/static/9f88225d2b155f757274961503b66ffb/6bdcf/evolution.png 315w,
-/frompat/static/9f88225d2b155f757274961503b66ffb/f058b/evolution.png 630w,
-/frompat/static/9f88225d2b155f757274961503b66ffb/8bd7c/evolution.png 845w&quot;
+        src=&quot;/frompat/static/99912978437da509e4b469ecf6dc11b6/f058b/evolution.png&quot;
+        srcset=&quot;/frompat/static/99912978437da509e4b469ecf6dc11b6/c26ae/evolution.png 158w,
+/frompat/static/99912978437da509e4b469ecf6dc11b6/6bdcf/evolution.png 315w,
+/frompat/static/99912978437da509e4b469ecf6dc11b6/f058b/evolution.png 630w,
+/frompat/static/99912978437da509e4b469ecf6dc11b6/8bd7c/evolution.png 845w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
