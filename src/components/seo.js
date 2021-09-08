@@ -50,7 +50,6 @@ const SEO = ({ description, lang, meta, title, image }) => {
     }
     ogImageUrl = origin + imageSrc;
   }
-
   return (
     <Helmet
       htmlAttributes={{
@@ -77,7 +76,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
         { property: `twitter:image`, content: ogImageUrl, },
         { property: `twitter:url`, content: `https://patriciadourado.com/frompat`, },
         { property: `twitter:description`, content: metaDescription,},
-      ].concat(meta)}
+      ].concat()}
     />
   )
 }
