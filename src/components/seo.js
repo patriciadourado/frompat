@@ -48,8 +48,10 @@ const SEO = ({ description, lang, meta, title, image }) => {
     if (typeof window !== "undefined") {
       origin = window.location.origin;
     }
-    ogImageUrl = origin + imageSrc;
+    // ogImageUrl = origin + imageSrc;
+    ogImageUrl = `${origin}${imageSrc}`;
   }
+  console.log(ogImageUrl)
   return (
     <Helmet
       htmlAttributes={{
@@ -73,10 +75,11 @@ const SEO = ({ description, lang, meta, title, image }) => {
         { property: `twitter:card`, content: `summary_large_image`, },
         { property: `twitter:creator`, content: siteMetadata?.social?.twitter || ``, },
         { property: `twitter:title`, content: title, },
-        { property: `twitter:image`, content: ogImageUrl, },
+        { property: `twitter:image:src`, content: ogImageUrl, },
+        { property: "twitter:image:alt", content: title, },
         { property: `twitter:url`, content: `https://patriciadourado.com/frompat`, },
         { property: `twitter:description`, content: metaDescription,},
-      ].concat()}
+      ].concat(meta)}
     />
   )
 }

@@ -20,7 +20,7 @@ Twitter is used today for many things, from voting for awards, promoting protest
 
 As it is a place full of users of different ages, but predominantly young, large companies use twitter for advertising, sales and, of course, answering possible complaints about their products in an automated and 'modern' way, full of memes of the moment.
 
-![Narazé Tedesco](/images/nazare-tedesco.png "Narazé Tedesco")
+![Naraze Tedesco](/images/nazare-tedesco.png "Naraze Tedesco")
 
 ### Badly programmed bot
 
