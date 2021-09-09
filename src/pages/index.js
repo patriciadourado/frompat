@@ -16,6 +16,7 @@ const BlogIndex = ({ data, location }) => {
           title="All posts" 
           image="https://raw.githubusercontent.com/patriciadourado/frompat/master/content/assets/frompat-icon.png"
           description="Computer engineer and a learning enthusiast. This is my first blog."
+          pathname={location.pathname}
         />
         <Bio />
         <p>
@@ -33,6 +34,7 @@ const BlogIndex = ({ data, location }) => {
         title="All posts | frompat " 
         image="https://raw.githubusercontent.com/patriciadourado/frompat/master/content/assets/frompat-icon.png"
         description="Computer engineer and a learning enthusiast. This is my first blog."
+        pathname={location.pathname}
       />
       <Bio />
       <ol style={{ listStyle: `none` }}>
