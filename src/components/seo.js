@@ -38,7 +38,7 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
   const { siteMetadata } = data.site;
   const metaDescription = description || siteMetadata.description;
   const defaultTitle = data.siteMetadata?.title;
-  const canonical = pathname ? `${siteMetadata.siteUrl}${pathname}` : null;
+  const canonical = pathname ? `https://patriciadourado.com${pathname}` : null;
   let ogImageUrl = image;
   let ttImageUrl = image;
   
