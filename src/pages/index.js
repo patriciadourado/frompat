@@ -9,7 +9,6 @@ import SEO from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
-  
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
@@ -39,7 +38,6 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
           return (
             <li key={post.fields.slug}>
               <article
@@ -54,7 +52,6 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} alt="frompat post"/>
-                  <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
@@ -64,6 +61,7 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                <small>{post.frontmatter.date}</small>
               </article>
             </li>
           )

@@ -13,7 +13,7 @@ I would like to introduce you to my new favorite one: [styled-components](https:
 
 Created by [Max Stoiber](https://mxstbr.com), styled-components is a library that allows you to write CSS code inside Javascript, which means you won't need to import .css file into your page anymore. In addiction to organize your code better, you also have the possibility to reuse the created components in the same project just calling them or in another project just copying the .js file into it.
 
-![Evolution](/images/evolution.png)
+![Evolution](/images/evolution2.png)
 
 I had my first experience with styled-components on a ReactJS project I started developing last year. I was presented to this fantastic library through a learning live on **twitch.tv** of an expert front end developer and once I used it I've never wanted to return to the old ways of styling. You will see why!
 

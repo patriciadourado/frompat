@@ -10,7 +10,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
   const featuredImage = post.frontmatter.featuredImage.childImageSharp.fluid.src;
-  console.log(featuredImage)
+  
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -89,10 +89,10 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fixed(height: 600, width: 1200) {
+            fixed(height: 600, width: 845) {
               src
             }
-            fluid(maxWidth: 1300, maxHeight: 700) {
+            fluid(maxWidth: 2000, maxHeight: 1500) {
               ...GatsbyImageSharpFluid
             }
           }
