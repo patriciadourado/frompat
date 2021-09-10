@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. Welcome to my blog!]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 09 Sep 2021 08:51:45 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. Welcome to my blog!]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Sep 2021 04:58:22 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
 &lt;h2&gt;Twitter&lt;/h2&gt;
 &lt;p&gt;Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -581,7 +581,10 @@ i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&qu
   time&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sleep&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;900&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Note that the number of tweets searched to be replied and retweeted changed to 12 due to the rate limit. If you prefer you can reduce the number of tweets that will be replied and retweeted or increase the time in &lt;code class=&quot;language-text&quot;&gt;time.sleep()&lt;/code&gt; for call the method;&lt;/p&gt;
 &lt;h2&gt;Thank you!&lt;/h2&gt;
-&lt;p&gt;Hope you enjoyed this article and can build your own Twitter bot! :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JWT Login Flask]]></title><description><![CDATA[This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework Flask…]]></description><link>https://patriciadourado.com/frompat/jwt-login-flask/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/jwt-login-flask/</guid><pubDate>Sat, 29 May 2021 22:01:45 GMT</pubDate><content:encoded>&lt;p&gt;This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework &lt;strong&gt;Flask&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Hope you enjoyed this article and can build your own Twitter bot! :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[JWT Login Flask]]></title><description><![CDATA[This is a tutorial to help you build a JWT based login application and registration using the micro web framework Flask. Note: This…]]></description><link>https://patriciadourado.com/frompat/jwt-login-flask/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/jwt-login-flask/</guid><pubDate>Sat, 29 May 2021 22:01:45 GMT</pubDate><content:encoded>&lt;p&gt;This is a tutorial to help you build a JWT based login application and registration using the micro web framework &lt;strong&gt;Flask&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note: This application has been updated and now has more features that are not described in this article (as confirmation email, reset password and etc), but it will be described in future articles. The repository of this application has the updated version.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Before running the Flask API its necessary to install a bunch of packages as you can check listed here &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask/blob/master/requirements.txt&quot;&gt;requirements.txt&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Python Virtual Environment&lt;/h2&gt;
 &lt;p&gt;To install the required modules I’ve used &lt;code class=&quot;language-text&quot;&gt;Python virtualenv&lt;/code&gt; to create a isolated Virtual Environment in Python so the project can have it’s own dependencies independently of other project’s dependencies. In resume: for not installing globally this modules. &lt;/p&gt;
@@ -615,7 +618,7 @@ i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&qu
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h4&gt;Installation&lt;/h4&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
 &lt;p&gt;To install &lt;code class=&quot;language-text&quot;&gt;virtualenv&lt;/code&gt; just run the following command on your project folder (here we use pip on windows):&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;py -3 -m pip install --user virtualenv&lt;/code&gt;&lt;/p&gt;
 &lt;h4&gt;Creating a Virtual Environment&lt;/h4&gt;
@@ -660,7 +663,7 @@ i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&qu
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;h4&gt;Create users table&lt;/h4&gt;
+&lt;h3&gt;Create users table&lt;/h3&gt;
 &lt;p&gt;The SQL for the created users table is the following:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;sql&quot;&gt;&lt;pre class=&quot;language-sql&quot;&gt;&lt;code class=&quot;language-sql&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;CREATE&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;TABLE&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;users
 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
@@ -809,7 +812,7 @@ cors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;sp
 &lt;h2&gt;Running Locally&lt;/h2&gt;
 &lt;p&gt;To run your application locally you can use the following command:&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;flask run&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Deploying Application&lt;/h2&gt;
+&lt;h2&gt;Deploying the Application&lt;/h2&gt;
 &lt;p&gt;This application was deployed on &lt;strong&gt;Heroku.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -843,7 +846,39 @@ cors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;sp
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The deployment is not described in this article. You can check the app up and running &lt;a href=&quot;https://jwtlogin-app.herokuapp.com/api/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you want to deploy to Heroku, follow the steps:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a Heroku account &lt;a href=&quot;https://signup.heroku.com/login&quot;&gt;here&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Download and Install Heroku CLI: &lt;a href=&quot;https://devcenter.heroku.com/articles/heroku-cli#download-and-install&quot;&gt;link&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Login into Heroku (on cli);&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Its necessary to add a Heroku &lt;em&gt;Procfile&lt;/em&gt; on flask directory to map the remote app:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a file called &lt;strong&gt;Procfile without&lt;/strong&gt; extension with the following line: &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;web: gunicorn app:app&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a &lt;strong&gt;requirements.txt&lt;/strong&gt; file with all the installed requirements for flask app runs; (see it in pip freeze)
+or just use the following command: &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;pip freeze &amp;gt; requirements.txt&lt;/code&gt;&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;On Heroku website (platform) create a new app called &lt;strong&gt;myapp&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;After installed heroku on CLI run: &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;heroku login&lt;/code&gt;&lt;/strong&gt; (it will make the login on web page pop-up);&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On Heroku website:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a database:  &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;heroku addons:create heroku-postgresql:hobby-dev --app myapp&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;To see the URL of database: &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;heroku config --app myapp&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You will need to create the PostegreSQL database table that we described on PostegreSQL section but on Heroku now, I did it using the pgAdmin interface linked to the address host of the Heroku database we created on the step above.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The database address host, user and password you can find on &lt;strong&gt;Database Credentials&lt;/strong&gt; on your Heroku app settings. You can follow &lt;a href=&quot;https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb&quot;&gt;this article&lt;/a&gt; if you need more help;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Initiate a local git repository: &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git init&lt;/code&gt;&lt;/strong&gt; Add on git the following files: &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;app.py requirements.txt Procfile&lt;/code&gt;&lt;/strong&gt; &lt;em&gt;(ignore venv, &lt;strong&gt;pycashe&lt;/strong&gt; with .gitignore)&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;Don’t forget to &lt;strong&gt;commit&lt;/strong&gt; your changes;&lt;/li&gt;
+&lt;li&gt;Link your local repository to heroku &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;heroku git:remote -a myapp&lt;/code&gt;&lt;/strong&gt;;&lt;/li&gt;
+&lt;li&gt;Push to Heroku your commits &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;git push heroku master&lt;/code&gt;&lt;/strong&gt;;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Flask-praetorian&lt;/h2&gt;
 &lt;p&gt;To let the things easier Flask-praetorian was used to handle the hard logic by itself. &lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -896,7 +931,7 @@ cors&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;init_app&lt;sp
 &lt;li&gt;The &lt;code class=&quot;language-text&quot;&gt;Protected page&lt;/code&gt; with a content message that only the logged user can view;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can check the whole jwtlogin flask application code in this** &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask&quot;&gt;github repository&lt;/a&gt;** and the deployed with ReactJS part on its description link;&lt;/p&gt;
-&lt;p&gt;Link inspirations:&lt;/p&gt;
+&lt;h3&gt;Inspiration and reference links:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://yasoob.me/posts/how-to-setup-and-deploy-jwt-auth-using-react-and-flask/&quot;&gt;Setting up &amp;#x26; Deploying JWT based auth using Flask &amp;#x26; React&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/&quot;&gt;Flask by Example – Setting up Postgres, SQLAlchemy, and Alembic&lt;/a&gt;&lt;/li&gt;
