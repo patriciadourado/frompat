@@ -6,7 +6,9 @@ description: A Flask JWT based login authentication using flask-praetorian
   database.
 featuredImage: './images/jwt-reactjs-flask.png'
 ---
-This is a simple tutorial to help you build a simple JWT based login application and registration using the micro web framework **Flask**.
+This is a tutorial to help you build a JWT based login application and registration using the micro web framework **Flask**.
+
+> **Note: This application has been updated and now has more features that are not described in this article (as confirmation email, reset password and etc), but it will be described in future articles. The repository of this application has the updated version.**
 
 Before running the Flask API its necessary to install a bunch of packages as you can check listed here [requirements.txt](https://github.com/patriciadourado/jwtlogin-flask/blob/master/requirements.txt).
 
@@ -16,7 +18,7 @@ To install the required modules I've used `Python virtualenv` to create a isolat
 
 ![Python virtualenv](/images/python-virtualenv-project-structure.jpg)
 
-#### Installation
+### Installation
 
 To install `virtualenv` just run the following command on your project folder (here we use pip on windows):
 
@@ -50,7 +52,7 @@ Its also necessary to create a database and **users** table before anything. I'v
 
 ![pgadmin4](/images/pgadmin4.png)
 
-#### Create users table
+### Create users table
 
 The SQL for the created users table is the following:
 
@@ -253,13 +255,32 @@ To run your application locally you can use the following command:
 
 `flask run`
 
-## Deploying Application
+## Deploying the Application
 
 This application was deployed on **Heroku.**
 
 ![heroku](/images/heroku.png)
 
-The deployment is not described in this article. You can check the app up and running [here](https://jwtlogin-app.herokuapp.com/api/).
+**If you want to deploy to Heroku, follow the steps:**
+
+* Create a Heroku account [here](https://signup.heroku.com/login);
+* Download and Install Heroku CLI: [link](https://devcenter.heroku.com/articles/heroku-cli#download-and-install);
+* Login into Heroku (on cli);
+* Its necessary to add a Heroku *Procfile* on flask directory to map the remote app:
+    * Create a file called **Procfile without** extension with the following line: **`web: gunicorn app:app`**
+* Create a **requirements.txt** file with all the installed requirements for flask app runs; (see it in pip freeze)
+or just use the following command: **`pip freeze > requirements.txt`**;
+* On Heroku website (platform) create a new app called **myapp**;
+* After installed heroku on CLI run: **`heroku login`** (it will make the login on web page pop-up);
+* On Heroku website:
+    * Create a database:  **`heroku addons:create heroku-postgresql:hobby-dev --app myapp`**
+    * To see the URL of database: **`heroku config --app myapp`**
+* You will need to create the PostegreSQL database table that we described on PostegreSQL section but on Heroku now, I did it using the pgAdmin interface linked to the address host of the Heroku database we created on the step above.
+    * The database address host, user and password you can find on **Database Credentials** on your Heroku app settings. You can follow [this article](https://medium.com/@vapurrmaid/getting-started-with-heroku-postgres-and-pgadmin-run-on-part-2-90d9499ed8fb) if you need more help;
+* Initiate a local git repository: **`git init`** Add on git the following files: **`app.py requirements.txt Procfile`** *(ignore venv, __pycashe__ with .gitignore)*;
+* Don't forget to **commit** your changes;
+* Link your local repository to heroku **`heroku git:remote -a myapp`**;
+* Push to Heroku your commits **`git push heroku master`**;
 
 ## Flask-praetorian
 
@@ -288,7 +309,7 @@ For now the ReactJS application (check the repository [here](https://github.com/
 
 **Note:** You can check the whole jwtlogin flask application code in this** [github repository](https://github.com/patriciadourado/jwtlogin-flask)** and the deployed with ReactJS part on its description link;
 
-Link inspirations:
+### Inspiration and reference links:
 
 * [Setting up & Deploying JWT based auth using Flask & React](http://yasoob.me/posts/how-to-setup-and-deploy-jwt-auth-using-react-and-flask/)
 * [Flask by Example – Setting up Postgres, SQLAlchemy, and Alembic](https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/)
