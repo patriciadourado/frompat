@@ -307,7 +307,16 @@ For now the ReactJS application (check the repository [here](https://github.com/
 2. The `Login Page` where the user can log-in;
 3. The `Protected page` with a content message that only the logged user can view;
 
-**Note:** You can check the whole jwtlogin flask application code in this** [github repository](https://github.com/patriciadourado/jwtlogin-flask)** and the deployed with ReactJS part on its description link;
+**Note: As I said at the beginning of the article, the application has been updated both the backend and the frontend, check some new pages:**
+
+### Login Page
+![Login](/images/login.png)
+### Registration Page
+![Registration](/images/registration.png)
+### Reset Password Page
+![Reset Password](/images/reset.png)
+
+**Note 2:** You can check the whole jwtlogin flask application code in this** [github repository](https://github.com/patriciadourado/jwtlogin-flask)** and the deployed with ReactJS part on its description link;
 
 ### Inspiration and reference links:
 
