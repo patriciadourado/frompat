@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. Welcome to my blog!]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Sep 2021 04:58:22 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[from Pat]]></title><description><![CDATA[Computer engineer and a learning enthusiast. Welcome to my blog!]]></description><link>https://patriciadourado.com/frompat</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Sep 2021 05:20:10 GMT</lastBuildDate><item><title><![CDATA[Developing a Twitter bot with Python]]></title><description><![CDATA[In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to…]]></description><link>https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</link><guid isPermaLink="false">https://patriciadourado.com/frompat/developing-a-twitter-bot-with-python/</guid><pubDate>Fri, 27 Aug 2021 18:42:40 GMT</pubDate><content:encoded>&lt;p&gt;In this article we gonna build a twitter bot in Python with Tweepy, a very nice library to invoke the Twitter API. You will learn how to retrieve data from Twitter and automatize your tweets.&lt;/p&gt;
 &lt;h2&gt;Twitter&lt;/h2&gt;
 &lt;p&gt;Around 2009 when I create my first Twitter account I remember Twitter still being a place to complain about life with strangers, tell how much depressive you feel, not sharing your user with your family and so on. You were limited to write in 140 characters without any other type of information attached such as photo (unless you used another place to host to your pictures and post the link on Twitter). Yeah, a lot has changed since those old days and everybody can say Twitter is one of the most  popular and not boring social network on nowadays.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -930,7 +930,99 @@ or just use the following command: &lt;strong&gt;&lt;code class=&quot;language-t
 &lt;li&gt;The &lt;code class=&quot;language-text&quot;&gt;Login Page&lt;/code&gt; where the user can log-in;&lt;/li&gt;
 &lt;li&gt;The &lt;code class=&quot;language-text&quot;&gt;Protected page&lt;/code&gt; with a content message that only the logged user can view;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; You can check the whole jwtlogin flask application code in this** &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask&quot;&gt;github repository&lt;/a&gt;** and the deployed with ReactJS part on its description link;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note: As I said at the beginning of the article, the application has been updated both the backend and the frontend, check some new pages:&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;Login Page&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/e582891bfe440d377bbeed8badeb3495/99272/login.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 99.36708860759494%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAACXBIWXMAABJ0AAASdAHeZh94AAACAklEQVQ4y5WTXU/TYBTH92FI/B4Gb2SGsEmZjqnEK0yARKPcEL+AF3INF9xBoqI3JJooYqJ4U65YDe2cI+u6rute2nV92vUV/7RsstLN8E9z2uc853fO6fOSOBsr3/fHzCZGASf0UaN0Op6Pgz0PdvXm5Ks0xVX4MXwM7Lku7Pbr9ScTN/Z2d3XDGMUnRrXkuN7njc2ttZc/fxxeE/Y9lmW/fT/8enBwRNO2bf+nbeR2+0LngiDkj48ZhlFUBfCFP1iOKDwgbedcsGGfMPhw+oqkuICtQIqilMs8aoqiOGqfTdNE5BBMCOl2u7D1el2WZWQhV6TrOvoPw4ZgTGiahsaagbRAnWGpqoqy8CM4CiMlpkWxJklSq932vPiDgSwxcJiyWq1KNanZavWsqDCL1YqvDK9tWbJUk+uS1lHxKMOiaRpl0eBVmAAmptVU9bZG2h2CwfmeXVKv14MnrjIhWB/LPxNahG/oQkNvdMwAsNCq31f8P6MZhH7Z309Rc/dyD6hsdv7RwuLSyuLyyvzC43TmPpXNTc2k373/YNsWgqMwKux9/HRr6s707FwydRfA8rPnT1+sZnIPk6nZGSozeTu58+at6zhRGGXDnfxTKnFcAWI5Lp9n8syvE5b9XSjAWSwWsWyIGdyTfxfDMAzsU/mSKjxfqcDw4RBvnFz88ODM/gVVb1UcxOdf3wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Login&quot;
+        title=&quot;Login&quot;
+        src=&quot;/frompat/static/e582891bfe440d377bbeed8badeb3495/f058b/login.png&quot;
+        srcset=&quot;/frompat/static/e582891bfe440d377bbeed8badeb3495/c26ae/login.png 158w,
+/frompat/static/e582891bfe440d377bbeed8badeb3495/6bdcf/login.png 315w,
+/frompat/static/e582891bfe440d377bbeed8badeb3495/f058b/login.png 630w,
+/frompat/static/e582891bfe440d377bbeed8badeb3495/99272/login.png 669w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Registration Page&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 519px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/3a719a812ad145fe9193ede8b1f6a366/b23ad/registration.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 141.13924050632912%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAIAAADuuAg3AAAACXBIWXMAABJ0AAASdAHeZh94AAAC3UlEQVQ4y5VUS08TURSeX2HcGYIhvNzA1p2Ja1euXRghgFARBFa60PBoy6NFbBA1LpSaGCEudKcYdGETFxCgHQZoZ/qQSp8z03am86jfzC2VASrly830Ps53vnPOPbdUyQpd1/HdY5j5gcHc/n5l51RQx9aqquL70fvuJkU9f/ho1fcTS03TaiITu0gkcuPCxfmOzg+fPxXy+Wr61MktjYgvvBhqaFoYGvF6F2VJqkFZ10VR1CBi6gQ2Nr6+XfT9+J5MJk8Vt5A1RXa5Zhx2u9vtdthH5zyeL99WX796OeOanXW5l5eWTQErGS41E6qiHBwcRCMRn8/n9/uj0WgqkQyFgr+BWCybyRIz3YRBJkzlEJXQiIW5oxOCqqiyCWySulJFEyhSTswBooghKqpacV+ZHAVc4FIpkyBK+bzfT4dCLMPs0NtMQZJL/wXP85IkUfhJp9NYC3wZORJBdSBm1B9GBjmVSiEwFCUUNLAfj2ez2Ux1gJxIJCzkQqEgI3tFKZ4FGJfJREQQhK0tfyBAy0WlVAOsypqGCfLJ14B/ypWw0RJ7e0FUIn0WjueMSFD6olyUZYl0grEkMOeFI7DkDGc4DIbYzc1NjgvjttlwmGW5QCCwuxtktnfi8T+k6armDC+YoHKGu0wG+0gBO3AtCKIkGfpoTAR1Ss645zAX5jgOB2gYuDjsGp5EB+uVlRWapqGM92Mh4zhlImPSsicGLwjoH4RzXLl0TlgKhkzGnZMd3Xd7bP1dvbb+oeGB4RFMbIMPeu8PdPfdw8DRna6emadzqqZCH01Bob1w7zTD1De11je3Xm65cqmh8eq167Dr7rXd6ui83dnV2tZe19iCo7rG5pa29mgsZiYhlF8V7v3NovfJ2MSEc2rcMTnmcNqnpmefeZzTLgwssYmjx6Pj75eWLFdFnuS5UH6S6BjysvnagGhRIFTK+DPQzPbAM15bW/tVA9bX11mWhQsQ/wLhLeg9xaHFsgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Registration&quot;
+        title=&quot;Registration&quot;
+        src=&quot;/frompat/static/3a719a812ad145fe9193ede8b1f6a366/b23ad/registration.png&quot;
+        srcset=&quot;/frompat/static/3a719a812ad145fe9193ede8b1f6a366/c26ae/registration.png 158w,
+/frompat/static/3a719a812ad145fe9193ede8b1f6a366/6bdcf/registration.png 315w,
+/frompat/static/3a719a812ad145fe9193ede8b1f6a366/b23ad/registration.png 519w&quot;
+        sizes=&quot;(max-width: 519px) 100vw, 519px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Reset Password Page&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 593px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/frompat/static/70cb0a578c0e10e8c35ba870e111a45c/0b5b1/reset.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96.83544303797468%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAABJ0AAASdAHeZh94AAACR0lEQVQ4y51SbWvTUBTurxD8I+KPceKm+ML84sr0w9yUSRFEEHzBz36x3fbBDgQH2dAiFtYytkFdu7RbU5ukWZvk5t7c3KRpk3husq1Ttjk8PFzOPTnPPc85J6nobAvDcDgcnpOQOp0WRV8XFrVdMXniouQklbjutUuXX4/fLFUqURBciBwEAegcDgbgz49PzFy5upzPmwjBFcJBbP+QnRTvatr7W7c/PEivCcKFKpfL5VJpfWtzs7Reajab5Y2Nz/m8IAi1Wm1n52e1Vq1UKp7nnUoOi8Xi0tJiLvsxm1vY3tr+8b2QzeU+5ZdXBWFl5YuwtvqtUHAYO1aXOrGV4Oy5jixpflQZmL7vw6zs2BhjNDbbBtgYE/BBrc9tkCQn++dkuMQcp7G3J7dlSZIONK0ltfabUqsliY0GxOHrsVpITjrnZPAMwwAxDpQghFgWtanHXNdlLmOe68HJHAcABmkIIRZ3PiLDehVVbSnyL0VWOh1EMLIJBzgY85Ng00J+v/83Wdd1EDRgrm9aA4QBfd3wD3S/q/s9A4IcBvIpF28axgmy6xrYCnsGTWfo3Vk6+YTem2WPXrBnb9n8GzbzEq50co6f95+G+22T2ix+5YhMcKD1yJ3HZCxNbkyTsSl7KuNk3tG5V3T6ObkeB+GceBiITeRQ2MchuR+3wRfH3AjhyCIcOoq6etQzuZNE4BPlajHGMMxDMgyQ2LaiKLt1sSoeAfx6PcYoWBNFud0G8mjPyaoty9JUVZXlc6CpHWSakPzH7/l/9hu8yRj2M99d8gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Reset Password&quot;
+        title=&quot;Reset Password&quot;
+        src=&quot;/frompat/static/70cb0a578c0e10e8c35ba870e111a45c/0b5b1/reset.png&quot;
+        srcset=&quot;/frompat/static/70cb0a578c0e10e8c35ba870e111a45c/c26ae/reset.png 158w,
+/frompat/static/70cb0a578c0e10e8c35ba870e111a45c/6bdcf/reset.png 315w,
+/frompat/static/70cb0a578c0e10e8c35ba870e111a45c/0b5b1/reset.png 593w&quot;
+        sizes=&quot;(max-width: 593px) 100vw, 593px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note 2:&lt;/strong&gt; You can check the whole jwtlogin flask application code in this** &lt;a href=&quot;https://github.com/patriciadourado/jwtlogin-flask&quot;&gt;github repository&lt;/a&gt;** and the deployed with ReactJS part on its description link;&lt;/p&gt;
 &lt;h3&gt;Inspiration and reference links:&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://yasoob.me/posts/how-to-setup-and-deploy-jwt-auth-using-react-and-flask/&quot;&gt;Setting up &amp;#x26; Deploying JWT based auth using Flask &amp;#x26; React&lt;/a&gt;&lt;/li&gt;
