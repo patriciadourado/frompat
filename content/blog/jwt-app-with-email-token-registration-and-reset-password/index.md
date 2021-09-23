@@ -2,7 +2,7 @@
 title: JWT App - Email Token Registration and Reset Password
 date: 2021-09-29T22:23:23.059Z
 description: As mentioned in JWT Login Flask post, more features have been added to Flask endpoint and ReactJS application, such as token registration via email and password reset.
-featuredImage: "./images/featured-reset-email.png"
+featuredImage: "./images/featured-reset-email2.png"
 ---
 
 In this article we gonna describe the new features added to the Flask and ReactJS JWT application started and documented before here: [JWT Login Flask](https://patriciadourado.com/frompat/jwt-login-flask/).
