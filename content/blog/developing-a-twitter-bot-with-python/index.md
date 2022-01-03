@@ -113,7 +113,7 @@ You can install Tweepy through the following command:
 
 `pip install tweepy`
 
-Particularly I use virtual environment to install my python libraries and packages not globally, if you don't know how to use it go back to the beginning of the last article here: [JWT Login Flask](https://patriciadourado.com/frompat/jwt-login-flask/).
+Particularly I use virtual environment to install my python libraries and packages not globally, if you don't know how to use it go back to the beginning of the last article here: [JWT Login Flask](https://www.patriciadourado.com/frompat/jwt-login-flask/).
 
 ## dotenv
 

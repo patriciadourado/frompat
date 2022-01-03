@@ -5,7 +5,7 @@ description: As mentioned in JWT Login Flask post, more features have been added
 featuredImage: "./images/reset-email.png"
 ---
 
-In this article we gonna describe the new features added to the Flask and ReactJS JWT application started and documented before here: [JWT Login Flask](https://patriciadourado.com/frompat/jwt-login-flask/).
+In this article we gonna describe the new features added to the Flask and ReactJS JWT application started and documented before here: [JWT Login Flask](https://www.patriciadourado.com/frompat/jwt-login-flask/).
 
 ## Flask Mail
 
@@ -135,7 +135,7 @@ Done that we can focus on our new endpoints we are going to create and change ou
 
 ## Registration endpoint
 
-As we will use the method `send_registration_email` from flask-praetorian, on our registration endpoint we need to load the CONFIRMATION_URI which will points to a frontend confirmation uri address with the token sent to the email. In my case it is ***CONFIRMATIONURI = 'https://patriciadourado.com/jwtlogin-reactjs/#/finalize'*** with the subject mail as following: ***SUBJECT = 'Please confirm your registration'***;
+As we will use the method `send_registration_email` from flask-praetorian, on our registration endpoint we need to load the CONFIRMATION_URI which will points to a frontend confirmation uri address with the token sent to the email. In my case it is ***CONFIRMATIONURI = 'https://www.patriciadourado.com/jwtlogin-reactjs/#/finalize'*** with the subject mail as following: ***SUBJECT = 'Please confirm your registration'***;
 
 ```python
 subject = SUBJECT

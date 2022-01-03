@@ -38,7 +38,7 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
   const { siteMetadata } = data.site;
   const metaDescription = description || siteMetadata.description;
   const defaultTitle = data.siteMetadata?.title;
-  const canonical = pathname ? `https://patriciadourado.com${pathname}` : null;
+  const canonical = pathname ? `https://www.patriciadourado.com${pathname}` : null;
   let ogImageUrl = image;
   let ttImageUrl = image;
   
@@ -50,7 +50,7 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
       origin = window.location.origin;
     }
     ogImageUrl = origin + imageSrc;
-    ttImageUrl = 'https://patriciadourado.com' + imageSrc;
+    ttImageUrl = 'https://www.patriciadourado.com' + imageSrc;
   }
   return (
     <Helmet
@@ -79,7 +79,7 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
         { property: `og:title`, content: title, },
         { property: `og:description`, content: metaDescription, },
         { property: `og:type`, content: `website`, },
-        { property: `og:url`, content: `https://patriciadourado.com/frompat`, },
+        { property: `og:url`, content: `https://www.patriciadourado.com/frompat`, },
         { property: `og:image`, content: ogImageUrl, },
         { property: `og:image:type`, content: `image/png`, },
         { property: `og:image:width`, content: `845`, },
@@ -87,7 +87,7 @@ const SEO = ({ description, lang, meta, title, image, pathname }) => {
         { property: `twitter:card`, content: `summary_large_image`, },
         { property: `twitter:creator`, content: siteMetadata?.social?.twitter || ``, },
         { property: `twitter:title`, content: title, },
-        { property: `twitter:url`, content: `https://patriciadourado.com/frompat`, },
+        { property: `twitter:url`, content: `https://www.patriciadourado.com/frompat`, },
         { property: `twitter:image`, content: ttImageUrl, },
         { property: "twitter:image:alt", content: title, },
         { property: `twitter:description`, content: metaDescription,},

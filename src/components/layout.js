@@ -27,7 +27,7 @@ const Layout = ({ location, title, children }) => {
       <footer>
         © {new Date().getFullYear()}, Built by
         {` `}
-        <a href="https://patriciadourado.com">Patricia Dourado</a>
+        <a href="https://www.patriciadourado.com">Patricia Dourado</a>
       </footer>
     </div>
   )
